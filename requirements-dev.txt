@@ -1,0 +1,9 @@
+# Chaine complete : audit, pretraitement, entrainement, figures, bilan.
+# A installer en local pour executer run_all.sh. Non utilise par le deploiement.
+-r requirements.txt
+statsmodels>=0.14
+prophet>=1.1
+lifelines>=0.27
+openpyxl>=3.1
+matplotlib>=3.7
+tabulate>=0.9

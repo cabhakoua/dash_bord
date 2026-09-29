@@ -1,0 +1,46 @@
+[theme]
+base = "light"
+
+backgroundColor       = "#F6F7F5"
+secondaryBackgroundColor = "#FFFFFF"
+textColor             = "#0E1C2B"
+primaryColor          = "#1668A6"
+linkColor             = "#1668A6"
+borderColor           = "#DCE2E5"
+dataframeBorderColor  = "#DCE2E5"
+dataframeHeaderBackgroundColor = "#EEF2F4"
+codeBackgroundColor   = "#EEF2F4"
+
+font        = "IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif"
+headingFont = "Archivo, IBM Plex Sans, system-ui, sans-serif"
+codeFont    = "IBM Plex Mono, ui-monospace, SFMono-Regular, monospace"
+
+baseFontSize      = 15
+baseRadius        = "0.35rem"
+buttonRadius      = "0.35rem"
+showWidgetBorder  = true
+showSidebarBorder = false
+
+headingFontWeights = [700, 650, 600, 600, 600, 600]
+
+chartCategoricalColors = [
+  "#1668A6", "#DFA23C", "#3D8A5C", "#B23A35", "#86B8D8", "#6B5B95",
+]
+chartSequentialColors = [
+  "#EDF3F8", "#D3E3EF", "#B3CFE3", "#8EB6D5", "#679BC4", "#4380B2",
+  "#1668A6", "#12558A", "#0E426D", "#0A3052",
+]
+
+[theme.sidebar]
+backgroundColor          = "#0E1C2B"
+secondaryBackgroundColor = "#18293C"
+textColor                = "#C6D3DD"
+primaryColor             = "#86B8D8"
+linkColor                = "#86B8D8"
+borderColor              = "#22364B"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
