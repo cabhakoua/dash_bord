@@ -378,6 +378,39 @@ def preparer_churn(df):
     return df, log
 
 
+def _lire_dates(s):
+    d = pd.to_datetime(s, format="%d/%m/%Y %H:%M", errors="coerce")
+    if d.isna().mean() > 0.5:                      # autre format : on retente jour d'abord
+        d = pd.to_datetime(s, dayfirst=True, errors="coerce")
+    return d
+
+
+def departs_churn(df):
+    """
+    Un départ par ligne : (CUSTOMER_ID, PLAN_NAME, REGION, date_depart).
+
+    La date de départ est celle de la dernière trace de l'abonné sur le réseau
+    (PURGE_TIME_ATSGSN). Seuls les abonnés étiquetés partis (CHURN_STATUS = 1) sont
+    gardés, après les mêmes filtres que `preparer_churn` : la somme des départs
+    reste ainsi cohérente avec les abonnés scorés dans le reste de l'application.
+    """
+    df = df.copy()
+    df["purge_dt"] = _lire_dates(df["PURGE_TIME_ATSGSN"])
+    df["crea_dt"] = _lire_dates(df["SUB_CREATE_TIME"])
+    ref = df["purge_dt"].max()
+    ok = (df["AGE"].between(15, 100) & (df["TENURE_MONTHS"] >= 0)
+          & (df["RECHARGE_FREQUENCY"] >= 0) & (df["purge_dt"] >= df["crea_dt"]))
+    df = df[ok]
+    df = df[df["crea_dt"] <= ref - pd.Timedelta(days=60)]
+    df = df[df["CHURN_STATUS"] == 1]
+    out = pd.DataFrame({
+        "CUSTOMER_ID": df["CUSTOMER_ID"].values,
+        "PLAN_NAME": df["PLAN_NAME"].values,
+        "REGION": df["REGION"].fillna("Non renseignée").astype(str).str.strip().values,
+        "date_depart": df["purge_dt"].dt.normalize().values})
+    return out.reset_index(drop=True)
+
+
 def entrainer_churn(df):
     """XGBoost sur 75 % des abonnés, AUC sur les 25 % restants, puis scores de tous."""
     from sklearn.compose import ColumnTransformer

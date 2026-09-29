@@ -18,7 +18,7 @@ warnings.filterwarnings("ignore")
 logging.getLogger("cmdstanpy").setLevel(logging.CRITICAL)
 logging.getLogger("prophet").setLevel(logging.CRITICAL)
 
-REFERENCE = "Référence (naïf saisonnier)"
+REFERENCE = "Naïf saisonnier"
 MODELES_DISPONIBLES = ["Prophet", "XGBoost", "LSTM", "SARIMA"]
 
 

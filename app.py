@@ -13,6 +13,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
+import departs as DP
 import pipeline as PL
 import previsions as PV
 import theme as T
@@ -101,19 +102,16 @@ def charger_modele():
 D = charger()
 
 # ================================================================== navigation
-PAGES_PRINCIPALES = ["Importer les données", "Situation", "Prévision des offres",
-                     "Ciblage"]
-PAGES_AVANCEES = ["Qualité des données", "Modèle de flux"]
+PAGES_PRINCIPALES = ["Importer les données", "Prévision des offres", "Scorer un abonné",
+                     "Situation", "Ciblage"]
+PAGES_AVANCEES = ["Modèles de churn"]
 LIBELLE_PAGE = {
     "Importer les données": "Importer mes données",
-    "Situation": "Vue d'ensemble",
     "Prévision des offres": "Prévision des offres",
-    "Ciblage": "Clients à risque",
     "Scorer un abonné": "Évaluer un client",
-    "Qualité des données": "Qualité des données",
+    "Situation": "Vue d'ensemble",
+    "Ciblage": "Clients à risque",
     "Modèles de churn": "Comparaison des modèles de départ",
-    "Demande en offres": "Demande Blue One, analyse",
-    "Modèle de flux": "Projection de la base Blue One",
 }
 ss_nav = st.session_state
 ss_nav.setdefault("nav_principal", PAGES_PRINCIPALES[0])
@@ -180,6 +178,32 @@ def charger_offres_long():
         return df
     except Exception:
         return None
+
+
+@st.cache_data(show_spinner=False)
+def charger_departs():
+    """
+    Un départ par ligne (date, région, forfait), calculé automatiquement depuis
+    churn_database2.csv (nettoyage inclus, voir `pipeline.departs_churn`).
+    Retourne (table, message d'erreur) : l'un des deux est None.
+    """
+    dossiers = [ROOT / "data", OUT, ROOT, ROOT.parent / "data", Path.cwd(), Path.cwd() / "data"]
+    for d in dossiers:
+        brut = d / "churn_database2.csv"
+        if brut.exists():
+            try:
+                dep = PL.departs_churn(pd.read_csv(brut))
+                return dep.dropna(subset=["date_depart"]), None
+            except Exception as e:
+                return None, f"`{brut}` n'a pas pu être traité : {e}"
+    p = OUT / "departs_abonnes.csv"          # à défaut, table déjà calculée
+    if p.exists():
+        try:
+            return pd.read_csv(p, parse_dates=["date_depart"]).dropna(subset=["date_depart"]), None
+        except Exception as e:
+            return None, f"`{p}` n'a pas pu être lu : {e}"
+    return None, ("Le fichier `churn_database2.csv` est introuvable. Placez-le dans le "
+                  "dossier `data` à côté de `app.py` : il sera lu et nettoyé automatiquement.")
 
 
 @st.cache_data(show_spinner=False)
@@ -397,14 +421,17 @@ if page == "Importer les données":
             with st.expander("Ce qui a été fait au fichier"):
                 st.markdown("\n".join(f"- {x}" for x in ss["churn_journal"]))
             T.note("Les scores individuels alimentent les pages <b>Situation</b> (risque par "
-                   "décile) et <b>Ciblage</b>. Le scoreur d'un abonné et la page des modèles "
-                   "gardent le modèle de référence.")
+                   "décile) et <b>Ciblage</b>. Les départs par période et par région de la "
+                   "page <b>Évaluer un client</b> se calculent tout seuls depuis "
+                   "<code>churn_database2.csv</code>. Le scoreur d'un abonné et la page des "
+                   "modèles gardent le modèle de référence.")
 
     if "series_import" in ss or "scores_import" in ss:
         st.write("")
         if st.button("Revenir aux données de référence"):
             for k in ["series_import", "long_import", "import_journal", "scores_import",
-                      "churn_auc", "churn_journal", "prev_live", "prev_multi", "sel_offres"]:
+                      "churn_auc", "churn_journal", "prev_live", "prev_multi",
+                      "sel_offres"]:
                 ss.pop(k, None)
             st.rerun()
 
@@ -491,13 +518,10 @@ elif page == "Situation":
         "base stable ne peut pas tenir. Les montants affichés viennent donc du scénario "
         "central du modèle de flux, pas du taux brut de l'extrait.")
 
-
-# ============================================================ QUALITÉ DONNÉES
-elif page == "Qualité des données":
+    # ---- Qualité des données (intégrée à la vue d'ensemble)
     a = D["audit"]
-    T.entete("Qualité des données",
-             "Ce que les deux fichiers sources contiennent réellement, et les corrections "
-             "appliquées avant toute modélisation.")
+    T.section("Qualité des données",
+              "ce que contiennent les fichiers sources, et les corrections appliquées")
 
     c = st.columns(4)
     with c[0]:
@@ -551,7 +575,7 @@ elif page == "Qualité des données":
 
     T.section("Séries d'activations", "aberrants détectés par filtre de Hampel")
     offre = st.radio("Forfait", ["Blue One M", "Blue One L", "Blue One S"],
-                     horizontal=True, label_visibility="collapsed")
+                     horizontal=True, label_visibility="collapsed", key="forfait_qualite")
     d = D["diag"][D["diag"]["offre"] == offre]
     ab = d[d["aberrant"]]
     fig = go.Figure()
@@ -570,6 +594,214 @@ elif page == "Qualité des données":
     fig.update_yaxes(title="activations / jour")
     T.axe_mois(fig, d["date"], pas=3)
     T.afficher(fig, 330)
+
+
+# ============================================================= MODÈLES CHURN
+elif page == "Modèles de churn":
+    T.entete("Comparaison des modèles de départ",
+             "Trois classifieurs entraînés sur les mêmes variables, évalués sur 25 % des "
+             "observations mises de côté. Validation croisée à cinq blocs sur le reste.")
+
+    avertir_reference("les modèles de churn ont été entraînés sur l'extrait de référence.")
+    t = D["t_churn"]
+    onglets = st.tabs(["Performance", "Discrimination", "Ce qui compte", "Survie"])
+
+    with onglets[0]:
+        c = st.columns(3)
+        for i, r in t.iterrows():
+            with c[i]:
+                T.tuile(r["Modele"], T.dec(r["AUC (test)"], 3),
+                        f"rappel {T.dec(r['Rappel (churn)'], 2)}, précision "
+                        f"{T.dec(r['Precision (churn)'], 2)}",
+                        "vert" if i == 0 else "",
+                        jauge=(r["AUC (test)"] - 0.5) / 0.5 * 100)
+
+        T.section("Métriques détaillées", "seuil de décision 0,5")
+        vue = st.radio("Vue", ["Pouvoir discriminant", "Classification"],
+                       horizontal=True, label_visibility="collapsed")
+        if vue == "Pouvoir discriminant":
+            st.dataframe(t[["Modele", "AUC (VC 5 blocs)", "AUC (test)",
+                            "AUC-PR (test)", "Brier"]], width="stretch",
+                         hide_index=True)
+            st.caption("Le score de Brier mesure l'écart entre le risque annoncé et ce "
+                       "qui s'est vraiment passé. Plus il est bas, plus le score "
+                       "s'utilise tel quel, sans correction.")
+            st.latex(r"\mathrm{Brier} = \frac{1}{n}\sum_{i=1}^{n}\bigl(\hat p_i - y_i\bigr)^2")
+        else:
+            st.dataframe(t[["Modele", "Exactitude", "Precision (churn)",
+                            "Rappel (churn)", "F1 (churn)", "Precision (fidele)",
+                            "Rappel (fidele)", "VN / FP / FN / VP"]],
+                         width="stretch", hide_index=True)
+            st.caption("VN / FP / FN / VP : vrais négatifs, faux positifs, faux "
+                       "négatifs, vrais positifs sur les 3 157 abonnés du jeu de test.")
+            st.latex(r"\text{précision} = \frac{VP}{VP + FP}, \quad "
+                     r"\text{rappel} = \frac{VP}{VP + FN}, \quad "
+                     r"F_1 = \frac{2\cdot\text{précision}\cdot\text{rappel}}"
+                     r"{\text{précision} + \text{rappel}}")
+
+        T.section("Compromis précision / rappel")
+        c = st.columns([2, 3])
+        with c[0]:
+            seuil = st.slider("Seuil de décision", 0.05, 0.95, 0.50, 0.01)
+            modele = st.selectbox("Modèle", t["Modele"].tolist())
+            dd = D["distrib"]
+            dd = dd[dd["modele"] == modele]
+            yp = (dd["proba"] >= seuil).astype(int)
+            vp = int(((yp == 1) & (dd["reel"] == 1)).sum())
+            fp = int(((yp == 1) & (dd["reel"] == 0)).sum())
+            fn = int(((yp == 0) & (dd["reel"] == 1)).sum())
+            vn = int(((yp == 0) & (dd["reel"] == 0)).sum())
+            prec = vp / max(vp + fp, 1)
+            rapp = vp / max(vp + fn, 1)
+            f1 = 2 * prec * rapp / max(prec + rapp, 1e-9)
+            k = st.columns(3)
+            with k[0]:
+                T.tuile("Précision", T.dec(prec, 3), f"{fp} fausses alertes", "ambre")
+            with k[1]:
+                T.tuile("Rappel", T.dec(rapp, 3), f"{fn} départs manqués", "brique")
+            with k[2]:
+                T.tuile("F1", T.dec(f1, 3), f"{vp} départs détectés", "vert")
+        with c[1]:
+            fig = go.Figure()
+            for lab, val, coul in [("abonnés fidèles", 0, T.VERT),
+                                   ("abonnés partis", 1, T.BRIQUE)]:
+                fig.add_trace(go.Histogram(
+                    x=dd[dd["reel"] == val]["proba"], name=lab, nbinsx=44,
+                    marker=dict(color=coul, line=dict(width=0)), opacity=.72))
+            fig.add_vline(x=seuil, line=dict(color=T.ENCRE, width=1.5, dash="dash"))
+            fig.update_layout(barmode="overlay", hovermode="closest")
+            fig.update_xaxes(title="score de risque attribué")
+            fig.update_yaxes(title="abonnés")
+            T.afficher(fig, 330)
+
+    with onglets[1]:
+        cb = D["courbes"]
+        c = st.columns(3)
+        for col, (code, titre, xl, yl) in zip(c, [
+                ("roc", "Courbe ROC", "faux positifs", "vrais positifs"),
+                ("pr", "Précision-rappel", "rappel", "précision"),
+                ("calibration", "Calibration", "score prédit", "fréquence observée")]):
+            fig = go.Figure()
+            if code == "roc":
+                fig.add_trace(go.Scatter(x=[0, 1], y=[0, 1], line=dict(
+                    color=T.TRAIT, width=1, dash="dash"), showlegend=False,
+                    hoverinfo="skip"))
+            if code == "calibration":
+                fig.add_trace(go.Scatter(x=[0, 1], y=[0, 1], line=dict(
+                    color=T.TRAIT, width=1, dash="dash"), showlegend=False,
+                    hoverinfo="skip"))
+            for i, m in enumerate(cb["modele"].unique()):
+                s = cb[(cb["modele"] == m) & (cb["courbe"] == code)]
+                fig.add_trace(go.Scatter(
+                    x=s["x"], y=s["y"], name=m, mode="lines+markers" if
+                    code == "calibration" else "lines",
+                    marker=dict(size=5), line=dict(color=T.SEQUENCE[i], width=1.8)))
+            fig.update_xaxes(title=xl)
+            fig.update_yaxes(title=yl)
+            fig.update_layout(hovermode="closest",
+                              legend=dict(font=dict(size=10.5)),
+                              title=dict(text=titre))
+            with col:
+                T.afficher(fig, 340)
+        st.caption("La calibration compte autant que la discrimination : un score qu'on "
+                   "multiplie par un prix pour obtenir un revenu à risque doit être "
+                   "calibré, pas seulement bien ordonné.")
+
+    with onglets[2]:
+        c = st.columns([3, 2])
+        with c[0]:
+            imp = D["imp"].head(10).sort_values("importance")
+            fig = go.Figure(go.Bar(
+                x=imp["importance"], y=imp["variable"], orientation="h",
+                error_x=dict(array=imp["ecart_type"], color=T.GRIS, thickness=1, width=3),
+                marker=dict(color=T.BLEU, line=dict(width=0)),
+                hovertemplate="%{y}<br>−%{x:.4f} d'AUC<extra></extra>"))
+            fig.update_xaxes(title="chute d'AUC après permutation")
+            fig.update_yaxes(showgrid=False)
+            fig.update_layout(hovermode="closest")
+            T.afficher(fig, 360)
+        with c[1]:
+            abl = pd.DataFrame(list(D["rc"]["_ablation_auc"].items()),
+                               columns=["Variante", "AUC"])
+            fig = go.Figure(go.Bar(
+                x=abl["AUC"], y=abl["Variante"], orientation="h",
+                marker=dict(color=[T.BRIQUE if v < 0.7 else T.CIEL for v in abl["AUC"]],
+                            line=dict(width=0)),
+                text=[f"{v:.3f}" for v in abl["AUC"]], textposition="inside",
+                insidetextfont=dict(color="#fff"),
+                hovertemplate="%{y} : AUC %{x:.3f}<extra></extra>"))
+            fig.add_vline(x=D["t_churn"]["AUC (test)"].max(),
+                          line=dict(color=T.ENCRE, width=1, dash="dot"))
+            fig.update_xaxes(title="AUC", range=[0.5, 0.95])
+            fig.update_yaxes(showgrid=False)
+            fig.update_layout(hovermode="closest")
+            T.afficher(fig, 360)
+        T.note(
+            "Sans la fréquence de recharge, l'AUC tombe à 0,57. Ce qui limite la "
+            "prédiction, c'est l'information dont on dispose, pas l'algorithme : un modèle "
+            "plus sophistiqué n'y changerait presque rien, alors que des données d'usage "
+            "(volume consommé, appels au service client, réclamations) feraient une vraie "
+            "différence.")
+
+    with onglets[3]:
+        c = st.columns([3, 2])
+        with c[0]:
+            km = D["km"]
+            fig = go.Figure()
+            for f in ["Blue One S", "Blue One M", "Blue One L"]:
+                s = km[km["forfait"] == f]
+                if s.empty:
+                    continue
+                coul = T.COULEUR_FORFAIT[f]
+                rgb = tuple(int(coul.lstrip("#")[i:i+2], 16) for i in (0, 2, 4))
+                fig.add_trace(go.Scatter(x=s["t"], y=s["haut"], line=dict(width=0),
+                                         showlegend=False, hoverinfo="skip"))
+                fig.add_trace(go.Scatter(x=s["t"], y=s["bas"], fill="tonexty",
+                                         fillcolor=f"rgba{rgb + (0.13,)}",
+                                         line=dict(width=0), showlegend=False,
+                                         hoverinfo="skip"))
+                fig.add_trace(go.Scatter(x=s["t"], y=s["survie"], name=f,
+                                         line=dict(color=coul, width=1.8, shape="hv")))
+            fig.add_hline(y=0.5, line=dict(color=T.TRAIT, width=1, dash="dot"))
+            fig.update_xaxes(title="jours depuis la souscription")
+            fig.update_yaxes(title="part d'abonnés encore actifs", tickformat=".0%")
+            T.afficher(fig, 360)
+        with c[1]:
+            med = D["rc"]["_survie"]["mediane_survie_jours"]
+            for f, v in med.items():
+                lisible = ("non atteinte sur la fenêtre"
+                           if v is None or v != v or v == float("inf") else f"{v:.0f} jours")
+                T.tuile(f, lisible, "durée médiane avant départ",
+                        "brique" if isinstance(v, float) and v == v and v < 150 else "")
+                st.write("")
+            st.caption(f"Concordance du modèle de Cox : "
+                       f"{D['rc']['_survie']['concordance_cox']}")
+        T.section("Rapports de risque", "référence : Blue One L")
+        cox = D["cox"].copy()
+        cox["signif"] = np.where(cox["p"] < 0.05, "oui", "non")
+        fig = go.Figure(go.Bar(
+            x=cox["exp(coef)"], y=cox["covariate"], orientation="h",
+            marker=dict(color=[T.BLEU if s == "oui" else T.TRAIT for s in cox["signif"]],
+                        line=dict(width=0)),
+            text=[f"×{v:.2f}" for v in cox["exp(coef)"]], textposition="outside",
+            hovertemplate="%{y}<br>risque ×%{x:.3f}<extra></extra>"))
+        fig.add_vline(x=1, line=dict(color=T.ENCRE, width=1))
+        fig.update_xaxes(title="rapport de risque")
+        fig.update_yaxes(showgrid=False)
+        fig.update_layout(hovermode="closest")
+        T.afficher(fig, 260)
+        st.caption("En gris, les coefficients non significatifs au seuil de 5 %.")
+        with st.expander("Les formules derrière ces courbes"):
+            st.markdown("La courbe de survie de Kaplan-Meier estime la part d'abonnés "
+                        "encore actifs à l'instant t. d<sub>i</sub> départs sur n<sub>i</sub> "
+                        "abonnés à risque à chaque date t<sub>i</sub> :",
+                        unsafe_allow_html=True)
+            st.latex(r"\hat S(t) = \prod_{t_i \le t}\left(1 - \frac{d_i}{n_i}\right)")
+            st.markdown("Le modèle de Cox relie le risque instantané de départ aux "
+                        "caractéristiques x de l'abonné. Le rapport de risque d'une "
+                        "variable est l'exponentielle de son coefficient :")
+            st.latex(r"h(t \mid x) = h_0(t)\,\exp\bigl(\beta^{\top}x\bigr), \qquad "
+                     r"\mathrm{RR}_j = e^{\beta_j}")
 
 
 # ===================================================================== CIBLAGE
@@ -954,134 +1186,100 @@ elif page == "Prévision des offres":
                      r"q_{0{,}9} = \text{quantile}_{90\,\%}\bigl(|y_t - \hat y_t|\bigr)")
 
 
-# =============================================================== MODÈLE DE FLUX
-elif page == "Modèle de flux":
-    T.entete("Projection de la base Blue One",
-             "Les deux modèles se retrouvent dans un simple bilan de stock : les entrées "
-             "viennent de la prévision de demande, les sorties du modèle de churn.")
+# ================================================================== SCORER
+else:
+    T.entete("Départs du réseau et évaluation d'un client",
+             "D'abord, combien d'abonnés ont quitté le réseau, par jour, semaine, mois et "
+             "an, région par région. Ensuite, le score d'un profil précis : il sert à "
+             "prioriser un appel, pas à estimer une probabilité de départ absolue.")
 
-    st.latex(r"N_{t+1} \;=\; N_t \;+\; \alpha\,A_t \;-\; p\,N_t")
-    st.markdown("""
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-            gap:1.1rem;font-size:.87rem;color:var(--gris);line-height:1.5;
-            margin-bottom:.6rem">
-  <div><b style="color:var(--encre)">N</b> : base active du forfait, estimée par le
-       volume mensuel d'activations</div>
-  <div><b style="color:var(--vert)">A</b> : activations prévues par le modèle de
-       demande</div>
-  <div><b style="color:var(--vert)">&alpha;</b> : part des activations qui sont de
-       nouvelles souscriptions, le reste étant des renouvellements</div>
-  <div><b style="color:var(--brique)">p</b> : taux de départ mensuel, issu du modèle
-       de churn après recalage</div>
-</div>""", unsafe_allow_html=True)
-    with st.expander("Comment p et α sont obtenus"):
-        st.markdown("Le modèle de churn prédit une probabilité de départ sur 60 jours. "
-                    "On la ramène à un rythme mensuel :")
-        st.latex(r"\tilde p_o = 1 - (1 - \hat p_o)^{1/2}")
-        st.markdown("L'extrait contient trop de partants pour donner un niveau crédible. "
-                    "On garde donc seulement les écarts relatifs entre forfaits, et on "
-                    "recale le niveau sur un taux de référence p*, fixé par scénario :")
-        st.latex(r"r_o = \frac{\tilde p_o}{\overline{\tilde p}}, \qquad p_o = p^{*}\,r_o")
-        st.markdown("Sur une base stable, ce qui entre compense ce qui sort, à la "
-                    "croissance mensuelle observée g près. On en déduit α au lieu de le "
-                    "supposer :")
-        st.latex(r"\alpha \approx p^{*} + g")
+    # ---- départs par période et par région
+    T.section("Abonnés partis du réseau", "par jour, semaine, mois et an")
+    DEPARTS, err_dep = charger_departs()
+    if DEPARTS is None:
+        st.error(err_dep)
+    elif DEPARTS.empty:
+        st.warning("Aucun départ daté dans le fichier des abonnés.")
+    else:
+        DP.afficher(DEPARTS, "du fichier des abonnés")
 
-    avertir_reference("le modèle de flux combine les prévisions et les scores de référence.")
-    scen = D["scen"]
-    LIBELLE = {
-        "prudent (p*=2%)": "Prudent : 2 % de départs par mois",
-        "central (p*=5%)": "Central : 5 % de départs par mois",
-        "haut (p*=10%)": "Pessimiste : 10 % de départs par mois",
-        "echantillon brut (non recale)": "Taux observé sur l'extrait (le plus élevé)",
-    }
-    noms = scen["scenario"].unique().tolist()
-    choix = st.radio("Scénario de taux de départ", noms, index=1, horizontal=True,
-                     format_func=lambda n: LIBELLE.get(n, n))
-    f = scen[scen["scenario"] == choix]
+    # ---- évaluation d'un client
+    T.section("Évaluer un client")
+    MOD = charger_modele()
+    if MOD is None:
+        st.stop()
+    if MOD.get("origine") == "reentraine":
+        T.note("Le fichier <code>modele_churn.joblib</code> vient d'une autre version de "
+               "scikit-learn. Le modèle a été reconstruit depuis les données nettoyées : "
+               "résultats identiques, aucune action requise.")
 
-    debut = f[f["mois"] == f["mois"].iloc[0]]["base_debut"].sum()
-    fin = f[f["mois"] == f["mois"].iloc[-1]]["base_fin"].sum()
-    c = st.columns(4)
+    c = st.columns([2, 3])
     with c[0]:
-        T.tuile("α déduit", T.pct(f["alpha"].iloc[0], 2),
-                "de l'identité de stock, non postulé")
+        plan = st.selectbox("Forfait", ["Blue One S", "Blue One M", "Blue One L"], index=1)
+        region = st.selectbox("Région", sorted(scores["REGION"].unique()))
+        genre = st.selectbox("Genre", ["Male", "Female"],
+                             format_func=lambda g: "Homme" if g == "Male" else "Femme")
+        age = st.slider("Âge", 15, 60, 25)
+        tenure = st.slider("Ancienneté (mois)", 1, 12, 4)
+        recharges = st.slider("Recharges effectuées", 0, 10, 2)
+
+    prix = PRIX[plan]
+    ligne = pd.DataFrame([{
+        "TENURE_MONTHS": tenure, "PLAN_NAME": plan, "MONTHLY_CHARGE": prix,
+        "RECHARGE_FREQUENCY": recharges, "REGION": region, "GENDER": genre, "AGE": age,
+        "anciennete_jours": tenure * 30,
+        "intensite_recharge": recharges / max(tenure, 1),
+        "revenu_cumule": prix * recharges,
+        "jamais_recharge": int(recharges == 0), "mois_creation": 3,
+        "tranche_age": ("<=20" if age <= 20 else "21-25" if age <= 25
+                        else "26-30" if age <= 30 else ">30"),
+    }])[MOD["colonnes"]]
+    p = float(MOD["pipeline"].predict_proba(ligne)[0, 1])
+    rang = float((scores["proba_churn"] < p).mean())
+    niveau, ton = (("élevé", "brique") if p > .6 else
+                   ("moyen", "ambre") if p > .35 else ("faible", "vert"))
+
     with c[1]:
-        T.tuile("Départs sur l'horizon", T.nb(f["departs_attendus"].sum()),
-                "tous forfaits", "brique")
-    with c[2]:
-        T.tuile("Revenu exposé", T.fcfa(f["revenu_a_risque_fcfa"].sum()),
-                "cumul sur l'horizon", "ambre")
-    with c[3]:
-        T.tuile("Base en fin d'horizon",
-                ("+" if fin >= debut else "\u2212") + T.pct(abs(fin / debut - 1), 2),
-                T.nb(fin) + " abonnés",
-                "vert" if fin >= debut else "brique")
+        fig = go.Figure(go.Indicator(
+            mode="gauge+number", value=p * 100,
+            number={"suffix": "\u202f%", "valueformat": ".0f",
+                    "font": {"size": 46, "color": T.ENCRE, "family": T.POLICE_TITRE}},
+            gauge={
+                "axis": {"range": [0, 100], "tickwidth": 0, "tickcolor": T.TRAIT,
+                         "tickfont": {"size": 11, "color": T.GRIS}},
+                "bar": {"color": T.ENCRE, "thickness": .22},
+                "bgcolor": "rgba(0,0,0,0)", "borderwidth": 0,
+                "steps": [{"range": [0, 35], "color": "#E4EFE8"},
+                          {"range": [35, 60], "color": "#FAF0DC"},
+                          {"range": [60, 100], "color": "#F6DEDC"}]}))
+        T.afficher(fig, 260)
+        k = st.columns(3)
+        with k[0]:
+            T.tuile("Niveau de risque", niveau.capitalize(), "lecture relative", ton)
+        with k[1]:
+            T.tuile("Rang dans la base", T.pct(rang, 0),
+                    "d'abonnés moins exposés", jauge=rang * 100)
+        with k[2]:
+            T.tuile("Revenu mensuel exposé", T.fcfa(p * prix),
+                    "forfait à " + T.nb(prix, "FCFA"))
 
-    T.section("Trajectoire de la base selon le scénario")
-    c = st.columns([3, 2])
-    with c[0]:
-        fig = go.Figure()
-        for i, nom in enumerate(scen["scenario"].unique()):
-            d = scen[(scen["scenario"] == nom) & (scen["forfait"] == "Blue One M")]
-            base0 = d["base_debut"].iloc[0]
-            y = [base0] + list(d["base_fin"])
-            fig.add_trace(go.Scatter(
-                x=list(range(len(y))), y=np.array(y) / 1000,
-                name=LIBELLE.get(nom, nom),
-                line=dict(color=T.SEQUENCE[i], width=2.4 if nom == choix else 1.2,
-                          dash=None if nom == choix else "dot"),
-                opacity=1 if nom == choix else .55,
-                hovertemplate="mois %{x} : %{y:.1f} k abonnés<extra>"
-                              + LIBELLE.get(nom, nom) + "</extra>"))
-        fig.add_hline(y=scen["base_debut"].iloc[0] / 1000,
-                      line=dict(color=T.TRAIT, width=1))
-        toutes = scen[scen["forfait"] == "Blue One M"]
-        lo = min(toutes["base_fin"].min(), toutes["base_debut"].min()) / 1000
-        hi = max(toutes["base_fin"].max(), toutes["base_debut"].max()) / 1000
-        marge = max((hi - lo) * 0.28, 1)
-        fig.update_xaxes(title="mois d'horizon", dtick=1)
-        fig.update_yaxes(title="base Blue One M (milliers)",
-                         range=[lo - marge, hi + marge])
-        fig.update_layout(hovermode="closest", legend=dict(font=dict(size=10.5)))
-        T.afficher(fig, 340)
-    with c[1]:
-        d = f.groupby("forfait").agg(
-            entrees=("entrees", "sum"), departs=("departs_attendus", "sum"),
-            base=("base_debut", "first")).reset_index()
-        d["ent_pct"] = d["entrees"] / d["base"]
-        d["dep_pct"] = -d["departs"] / d["base"]
-        fig = go.Figure()
-        fig.add_trace(go.Bar(x=d["forfait"], y=d["ent_pct"], name="entrées",
-                             marker_color=T.VERT, customdata=d["entrees"],
-                             hovertemplate="+%{customdata:,.0f} abonnés"
-                                           " (%{y:.1%})<extra></extra>"))
-        fig.add_trace(go.Bar(x=d["forfait"], y=d["dep_pct"], name="départs",
-                             marker_color=T.BRIQUE, customdata=d["departs"],
-                             hovertemplate="−%{customdata:,.0f} abonnés"
-                                           " (%{y:.1%})<extra></extra>"))
-        fig.add_hline(y=0, line=dict(color=T.ENCRE, width=1))
-        fig.update_yaxes(title="part de la base, cumul sur l'horizon", tickformat=".0%")
-        fig.update_layout(barmode="relative", hovermode="closest")
-        T.afficher(fig, 340)
-        st.caption("Rapporté à la taille de chaque base, pour rendre les trois forfaits "
-                   "comparables malgré leurs volumes très différents.")
-
-    T.section("Détail mois par mois")
-    detail = f.drop(columns=["scenario"]).copy()
-    detail["mois"] = detail["mois"].map(T.etiquette_mois)
-    detail = detail.rename(columns={
-        "alpha": "Part des activations qui s'ajoute à la base", "mois": "Mois", "forfait": "Forfait",
-        "taux_depart_mensuel": "Taux de départ", "base_debut": "Base au 1er",
-        "activations_prevues": "Activations prévues", "entrees": "Entrées",
-        "departs_attendus": "Départs", "base_fin": "Base en fin de mois",
-        "variation_%": "Variation (%)", "revenu_a_risque_fcfa": "Revenu exposé (FCFA)",
-        "revenu_base_fcfa": "Revenu de la base (FCFA)"})
-    st.dataframe(detail, width="stretch", hide_index=True)
-
-    T.note(
-        "Le scénario <b>échantillon brut</b> reprend tel quel le niveau de risque de "
-        "l'extrait fourni, qui compte 44 % de partants. C'est une borne haute, pas une "
-        "prévision. La grande inconnue reste α : le classeur d'activations ne distingue "
-        "pas une souscription d'un renouvellement. Une confirmation de CAMTEL réduirait "
-        "nettement l'écart entre les scénarios.")
+    T.section("Effet de la fréquence de recharge", "variable la plus décisive du modèle")
+    courbe = []
+    for r in range(0, 11):
+        l2 = ligne.copy()
+        l2["RECHARGE_FREQUENCY"] = r
+        l2["intensite_recharge"] = r / max(tenure, 1)
+        l2["revenu_cumule"] = prix * r
+        l2["jamais_recharge"] = int(r == 0)
+        courbe.append(float(MOD["pipeline"].predict_proba(l2)[0, 1]))
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(x=list(range(11)), y=courbe, line=dict(color=T.BLEU, width=2.4),
+                             name="score", hovertemplate="%{x} recharges : %{y:.1%}<extra></extra>"))
+    fig.add_trace(go.Scatter(x=[recharges], y=[p], mode="markers", name="profil saisi",
+                             marker=dict(color=T.AMBRE, size=12,
+                                         line=dict(color="#fff", width=2))))
+    fig.update_xaxes(title="recharges effectuées", dtick=1)
+    fig.update_yaxes(title="score de risque", tickformat=".0%")
+    fig.update_layout(hovermode="closest")
+    T.afficher(fig, 280)
+    st.caption("Toutes les autres caractéristiques restent celles saisies à gauche.")
