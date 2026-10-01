@@ -1,6 +1,7 @@
 # Dependances de l'application deployee.
-# Volontairement minimales : Streamlit Community Cloud installe ce fichier a chaque
-# demarrage, et prophet/statsmodels/lifelines ne servent qu'aux scripts d'entrainement.
+# Streamlit Community Cloud installe ce fichier a chaque demarrage.
+# prophet et tensorflow-cpu sont necessaires aux modeles Prophet et LSTM de la page Prevision.
+# statsmodels et lifelines ne servent qu'aux scripts d'entrainement (requirements-dev).
 streamlit>=1.49
 pandas>=2.0
 numpy>=1.24
@@ -8,3 +9,5 @@ plotly>=5.18
 scikit-learn>=1.4
 xgboost>=2.0
 joblib>=1.3
+prophet>=1.1
+tensorflow-cpu
