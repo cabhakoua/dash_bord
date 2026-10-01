@@ -1,0 +1,901 @@
+date,serie,valeur,offre
+2025-06-28,reel,46.0,Blue One S
+2025-06-29,reel,35.0,Blue One S
+2025-06-30,reel,46.0,Blue One S
+2025-07-01,reel,31.0,Blue One S
+2025-07-02,reel,60.0,Blue One S
+2025-07-03,reel,26.0,Blue One S
+2025-07-04,reel,32.0,Blue One S
+2025-07-05,reel,36.0,Blue One S
+2025-07-06,reel,42.0,Blue One S
+2025-07-07,reel,38.0,Blue One S
+2025-07-08,reel,39.0,Blue One S
+2025-07-09,reel,28.0,Blue One S
+2025-07-10,reel,37.0,Blue One S
+2025-07-11,reel,36.0,Blue One S
+2025-07-12,reel,35.0,Blue One S
+2025-07-13,reel,30.0,Blue One S
+2025-07-14,reel,31.0,Blue One S
+2025-07-15,reel,33.0,Blue One S
+2025-07-16,reel,39.0,Blue One S
+2025-07-17,reel,40.0,Blue One S
+2025-07-18,reel,36.0,Blue One S
+2025-07-19,reel,27.0,Blue One S
+2025-07-20,reel,33.0,Blue One S
+2025-07-21,reel,48.0,Blue One S
+2025-07-22,reel,36.0,Blue One S
+2025-07-23,reel,62.0,Blue One S
+2025-07-24,reel,70.0,Blue One S
+2025-07-25,reel,70.0,Blue One S
+2025-07-26,reel,70.0,Blue One S
+2025-07-27,reel,67.0,Blue One S
+2025-07-28,reel,70.0,Blue One S
+2025-07-29,reel,81.0,Blue One S
+2025-07-30,reel,73.0,Blue One S
+2025-07-31,reel,75.0,Blue One S
+2025-08-01,reel,73.0,Blue One S
+2025-08-02,reel,53.0,Blue One S
+2025-08-03,reel,57.0,Blue One S
+2025-08-04,reel,76.0,Blue One S
+2025-08-05,reel,79.0,Blue One S
+2025-08-06,reel,67.0,Blue One S
+2025-08-07,reel,66.0,Blue One S
+2025-08-08,reel,72.0,Blue One S
+2025-08-09,reel,58.0,Blue One S
+2025-08-10,reel,64.0,Blue One S
+2025-08-11,reel,83.0,Blue One S
+2025-08-12,reel,80.0,Blue One S
+2025-08-13,reel,57.0,Blue One S
+2025-08-14,reel,74.0,Blue One S
+2025-08-15,reel,57.0,Blue One S
+2025-08-16,reel,57.0,Blue One S
+2025-08-17,reel,38.0,Blue One S
+2025-08-18,reel,80.0,Blue One S
+2025-08-19,reel,68.0,Blue One S
+2025-08-20,reel,71.0,Blue One S
+2025-08-21,reel,41.0,Blue One S
+2025-08-22,reel,40.0,Blue One S
+2025-08-23,reel,52.0,Blue One S
+2025-08-24,reel,34.0,Blue One S
+2025-08-25,reel,47.0,Blue One S
+2025-08-26,reel,40.0,Blue One S
+2025-06-28,Naif saisonnier (reference),38.0,Blue One S
+2025-06-29,Naif saisonnier (reference),26.0,Blue One S
+2025-06-30,Naif saisonnier (reference),33.0,Blue One S
+2025-07-01,Naif saisonnier (reference),37.0,Blue One S
+2025-07-02,Naif saisonnier (reference),44.0,Blue One S
+2025-07-03,Naif saisonnier (reference),46.0,Blue One S
+2025-07-04,Naif saisonnier (reference),47.0,Blue One S
+2025-07-05,Naif saisonnier (reference),38.0,Blue One S
+2025-07-06,Naif saisonnier (reference),26.0,Blue One S
+2025-07-07,Naif saisonnier (reference),33.0,Blue One S
+2025-07-08,Naif saisonnier (reference),37.0,Blue One S
+2025-07-09,Naif saisonnier (reference),44.0,Blue One S
+2025-07-10,Naif saisonnier (reference),46.0,Blue One S
+2025-07-11,Naif saisonnier (reference),47.0,Blue One S
+2025-07-12,Naif saisonnier (reference),38.0,Blue One S
+2025-07-13,Naif saisonnier (reference),26.0,Blue One S
+2025-07-14,Naif saisonnier (reference),33.0,Blue One S
+2025-07-15,Naif saisonnier (reference),37.0,Blue One S
+2025-07-16,Naif saisonnier (reference),44.0,Blue One S
+2025-07-17,Naif saisonnier (reference),46.0,Blue One S
+2025-07-18,Naif saisonnier (reference),47.0,Blue One S
+2025-07-19,Naif saisonnier (reference),38.0,Blue One S
+2025-07-20,Naif saisonnier (reference),26.0,Blue One S
+2025-07-21,Naif saisonnier (reference),33.0,Blue One S
+2025-07-22,Naif saisonnier (reference),37.0,Blue One S
+2025-07-23,Naif saisonnier (reference),44.0,Blue One S
+2025-07-24,Naif saisonnier (reference),46.0,Blue One S
+2025-07-25,Naif saisonnier (reference),47.0,Blue One S
+2025-07-26,Naif saisonnier (reference),38.0,Blue One S
+2025-07-27,Naif saisonnier (reference),26.0,Blue One S
+2025-07-28,Naif saisonnier (reference),33.0,Blue One S
+2025-07-29,Naif saisonnier (reference),37.0,Blue One S
+2025-07-30,Naif saisonnier (reference),44.0,Blue One S
+2025-07-31,Naif saisonnier (reference),46.0,Blue One S
+2025-08-01,Naif saisonnier (reference),47.0,Blue One S
+2025-08-02,Naif saisonnier (reference),38.0,Blue One S
+2025-08-03,Naif saisonnier (reference),26.0,Blue One S
+2025-08-04,Naif saisonnier (reference),33.0,Blue One S
+2025-08-05,Naif saisonnier (reference),37.0,Blue One S
+2025-08-06,Naif saisonnier (reference),44.0,Blue One S
+2025-08-07,Naif saisonnier (reference),46.0,Blue One S
+2025-08-08,Naif saisonnier (reference),47.0,Blue One S
+2025-08-09,Naif saisonnier (reference),38.0,Blue One S
+2025-08-10,Naif saisonnier (reference),26.0,Blue One S
+2025-08-11,Naif saisonnier (reference),33.0,Blue One S
+2025-08-12,Naif saisonnier (reference),37.0,Blue One S
+2025-08-13,Naif saisonnier (reference),44.0,Blue One S
+2025-08-14,Naif saisonnier (reference),46.0,Blue One S
+2025-08-15,Naif saisonnier (reference),47.0,Blue One S
+2025-08-16,Naif saisonnier (reference),38.0,Blue One S
+2025-08-17,Naif saisonnier (reference),26.0,Blue One S
+2025-08-18,Naif saisonnier (reference),33.0,Blue One S
+2025-08-19,Naif saisonnier (reference),37.0,Blue One S
+2025-08-20,Naif saisonnier (reference),44.0,Blue One S
+2025-08-21,Naif saisonnier (reference),46.0,Blue One S
+2025-08-22,Naif saisonnier (reference),47.0,Blue One S
+2025-08-23,Naif saisonnier (reference),38.0,Blue One S
+2025-08-24,Naif saisonnier (reference),26.0,Blue One S
+2025-08-25,Naif saisonnier (reference),33.0,Blue One S
+2025-08-26,Naif saisonnier (reference),37.0,Blue One S
+2025-06-28,"SARIMA (2,1,2)(1,1,1)7",39.163115804548426,Blue One S
+2025-06-29,"SARIMA (2,1,2)(1,1,1)7",30.2983153748633,Blue One S
+2025-06-30,"SARIMA (2,1,2)(1,1,1)7",44.27486764558804,Blue One S
+2025-07-01,"SARIMA (2,1,2)(1,1,1)7",40.82425189181529,Blue One S
+2025-07-02,"SARIMA (2,1,2)(1,1,1)7",44.08649212464452,Blue One S
+2025-07-03,"SARIMA (2,1,2)(1,1,1)7",41.8906618633815,Blue One S
+2025-07-04,"SARIMA (2,1,2)(1,1,1)7",42.15231735252724,Blue One S
+2025-07-05,"SARIMA (2,1,2)(1,1,1)7",38.464397781796706,Blue One S
+2025-07-06,"SARIMA (2,1,2)(1,1,1)7",30.459471236667454,Blue One S
+2025-07-07,"SARIMA (2,1,2)(1,1,1)7",45.551985608984104,Blue One S
+2025-07-08,"SARIMA (2,1,2)(1,1,1)7",41.05268738480946,Blue One S
+2025-07-09,"SARIMA (2,1,2)(1,1,1)7",43.785517572477275,Blue One S
+2025-07-10,"SARIMA (2,1,2)(1,1,1)7",40.99159990430833,Blue One S
+2025-07-11,"SARIMA (2,1,2)(1,1,1)7",41.14804525265983,Blue One S
+2025-07-12,"SARIMA (2,1,2)(1,1,1)7",38.0520275580822,Blue One S
+2025-07-13,"SARIMA (2,1,2)(1,1,1)7",30.1697732883575,Blue One S
+2025-07-14,"SARIMA (2,1,2)(1,1,1)7",45.421489814713595,Blue One S
+2025-07-15,"SARIMA (2,1,2)(1,1,1)7",40.77258812651684,Blue One S
+2025-07-16,"SARIMA (2,1,2)(1,1,1)7",43.429893429310226,Blue One S
+2025-07-17,"SARIMA (2,1,2)(1,1,1)7",40.5506534447424,Blue One S
+2025-07-18,"SARIMA (2,1,2)(1,1,1)7",40.692089660864156,Blue One S
+2025-07-19,"SARIMA (2,1,2)(1,1,1)7",37.6805118675318,Blue One S
+2025-07-20,"SARIMA (2,1,2)(1,1,1)7",29.815757854579843,Blue One S
+2025-07-21,"SARIMA (2,1,2)(1,1,1)7",45.090185939538586,Blue One S
+2025-07-22,"SARIMA (2,1,2)(1,1,1)7",40.41994202855548,Blue One S
+2025-07-23,"SARIMA (2,1,2)(1,1,1)7",43.066473055970484,Blue One S
+2025-07-24,"SARIMA (2,1,2)(1,1,1)7",40.175061108024735,Blue One S
+2025-07-25,"SARIMA (2,1,2)(1,1,1)7",40.31435614214926,Blue One S
+2025-07-26,"SARIMA (2,1,2)(1,1,1)7",37.314824428072285,Blue One S
+2025-07-27,"SARIMA (2,1,2)(1,1,1)7",29.4525669774915,Blue One S
+2025-07-28,"SARIMA (2,1,2)(1,1,1)7",44.730235061916204,Blue One S
+2025-07-29,"SARIMA (2,1,2)(1,1,1)7",40.056946499016426,Blue One S
+2025-07-30,"SARIMA (2,1,2)(1,1,1)7",42.70194048324196,Blue One S
+2025-07-31,"SARIMA (2,1,2)(1,1,1)7",39.80879209987432,Blue One S
+2025-08-01,"SARIMA (2,1,2)(1,1,1)7",39.94778167594337,Blue One S
+2025-08-02,"SARIMA (2,1,2)(1,1,1)7",36.949968438833885,Blue One S
+2025-08-03,"SARIMA (2,1,2)(1,1,1)7",29.088067144380066,Blue One S
+2025-08-04,"SARIMA (2,1,2)(1,1,1)7",44.36619744263709,Blue One S
+2025-08-05,"SARIMA (2,1,2)(1,1,1)7",39.69247453391557,Blue One S
+2025-08-06,"SARIMA (2,1,2)(1,1,1)7",42.33724924569046,Blue One S
+2025-08-07,"SARIMA (2,1,2)(1,1,1)7",39.44385314485269,Blue One S
+2025-08-08,"SARIMA (2,1,2)(1,1,1)7",39.582799144698996,Blue One S
+2025-08-09,"SARIMA (2,1,2)(1,1,1)7",36.585231063131424,Blue One S
+2025-08-10,"SARIMA (2,1,2)(1,1,1)7",28.72338057741695,Blue One S
+2025-08-11,"SARIMA (2,1,2)(1,1,1)7",44.00157681445854,Blue One S
+2025-08-12,"SARIMA (2,1,2)(1,1,1)7",39.32779194256421,Blue One S
+2025-08-13,"SARIMA (2,1,2)(1,1,1)7",41.97253537323526,Blue One S
+2025-08-14,"SARIMA (2,1,2)(1,1,1)7",39.0791039333666,Blue One S
+2025-08-15,"SARIMA (2,1,2)(1,1,1)7",39.21804371668938,Blue One S
+2025-08-16,"SARIMA (2,1,2)(1,1,1)7",36.220510608671574,Blue One S
+2025-08-17,"SARIMA (2,1,2)(1,1,1)7",28.358667371261422,Blue One S
+2025-08-18,"SARIMA (2,1,2)(1,1,1)7",43.6368730150386,Blue One S
+2025-08-19,"SARIMA (2,1,2)(1,1,1)7",38.96307930356395,Blue One S
+2025-08-20,"SARIMA (2,1,2)(1,1,1)7",41.607818271716084,Blue One S
+2025-08-21,"SARIMA (2,1,2)(1,1,1)7",38.714381790430274,Blue One S
+2025-08-22,"SARIMA (2,1,2)(1,1,1)7",38.85332068691242,Blue One S
+2025-08-23,"SARIMA (2,1,2)(1,1,1)7",35.85579256817274,Blue One S
+2025-08-24,"SARIMA (2,1,2)(1,1,1)7",27.993950364795634,Blue One S
+2025-08-25,"SARIMA (2,1,2)(1,1,1)7",43.27215735052468,Blue One S
+2025-08-26,"SARIMA (2,1,2)(1,1,1)7",38.598362378007735,Blue One S
+2025-06-28,Prophet,32.54756649570673,Blue One S
+2025-06-29,Prophet,26.868366343144206,Blue One S
+2025-06-30,Prophet,36.91958132116777,Blue One S
+2025-07-01,Prophet,33.78239685745769,Blue One S
+2025-07-02,Prophet,35.33478496678012,Blue One S
+2025-07-03,Prophet,33.13352082075456,Blue One S
+2025-07-04,Prophet,33.19357506573947,Blue One S
+2025-07-05,Prophet,31.143177024091784,Blue One S
+2025-07-06,Prophet,25.88844208131656,Blue One S
+2025-07-07,Prophet,36.19890698848814,Blue One S
+2025-07-08,Prophet,33.42882112494903,Blue One S
+2025-07-09,Prophet,35.278839989329526,Blue One S
+2025-07-10,Prophet,33.382971765500926,Blue One S
+2025-07-11,Prophet,33.69441003753241,Blue One S
+2025-07-12,Prophet,31.88091010173043,Blue One S
+2025-07-13,Prophet,26.85729356618882,Blue One S
+2025-07-14,Prophet,37.20930051155336,Blue One S
+2025-07-15,Prophet,34.569492690916455,Blue One S
+2025-07-16,Prophet,36.46670698999555,Blue One S
+2025-07-17,Prophet,34.61780703194876,Blue One S
+2025-07-18,Prophet,34.919831365172094,Blue One S
+2025-07-19,Prophet,33.08556084750446,Blue One S
+2025-07-20,Prophet,28.043784030409107,Blue One S
+2025-07-21,Prophet,38.20135789758839,Blue One S
+2025-07-22,Prophet,35.47362515815355,Blue One S
+2025-07-23,Prophet,37.221542263271886,Blue One S
+2025-07-24,Prophet,35.248164724494885,Blue One S
+2025-07-25,Prophet,35.397054824718374,Blue One S
+2025-07-26,Prophet,33.42800039508655,Blue One S
+2025-07-27,Prophet,28.285018065864552,Blue One S
+2025-07-28,Prophet,38.19661651061324,Blue One S
+2025-07-29,Prophet,35.36073829158521,Blue One S
+2025-07-30,Prophet,36.96958872648572,Blue One S
+2025-07-31,Prophet,34.9108959981745,Blue One S
+2025-08-01,Prophet,34.9726328781766,Blue One S
+2025-08-02,Prophet,32.95895314770499,Blue One S
+2025-08-03,Prophet,27.82600884528795,Blue One S
+2025-08-04,Prophet,37.62049996387214,Blue One S
+2025-08-05,Prophet,34.81923042636762,Blue One S
+2025-08-06,Prophet,36.441730756357316,Blue One S
+2025-08-07,Prophet,34.456387043115896,Blue One S
+2025-08-08,Prophet,34.59156963046705,Blue One S
+2025-08-09,Prophet,32.6918768986129,Blue One S
+2025-08-10,Prophet,27.721851012041242,Blue One S
+2025-08-11,Prophet,37.54289157064472,Blue One S
+2025-08-12,Prophet,34.90749465393683,Blue One S
+2025-08-13,Prophet,36.65972837040076,Blue One S
+2025-08-14,Prophet,34.846278868431575,Blue One S
+2025-08-15,Prophet,35.13402257616147,Blue One S
+2025-08-16,Prophet,33.4066019085184,Blue One S
+2025-08-17,Prophet,28.636051947299514,Blue One S
+2025-08-18,Prophet,38.49807853372508,Blue One S
+2025-08-19,Prophet,36.020969390945176,Blue One S
+2025-08-20,Prophet,37.87390081351063,Blue One S
+2025-08-21,Prophet,36.1828691976358,Blue One S
+2025-08-22,Prophet,36.55466667710507,Blue One S
+2025-08-23,Prophet,34.91374129481016,Blue One S
+2025-08-24,Prophet,30.241681293707313,Blue One S
+2025-08-25,Prophet,40.03079999466022,Blue One S
+2025-08-26,Prophet,37.58765857425514,Blue One S
+2025-06-28,XGBoost (retards + calendrier),37.25324630737305,Blue One S
+2025-06-29,XGBoost (retards + calendrier),29.66159439086914,Blue One S
+2025-06-30,XGBoost (retards + calendrier),44.17839813232422,Blue One S
+2025-07-01,XGBoost (retards + calendrier),40.45964050292969,Blue One S
+2025-07-02,XGBoost (retards + calendrier),43.399017333984375,Blue One S
+2025-07-03,XGBoost (retards + calendrier),48.37864685058594,Blue One S
+2025-07-04,XGBoost (retards + calendrier),46.48320770263672,Blue One S
+2025-07-05,XGBoost (retards + calendrier),38.265201568603516,Blue One S
+2025-07-06,XGBoost (retards + calendrier),31.303205490112305,Blue One S
+2025-07-07,XGBoost (retards + calendrier),44.44141387939453,Blue One S
+2025-07-08,XGBoost (retards + calendrier),41.773353576660156,Blue One S
+2025-07-09,XGBoost (retards + calendrier),44.39020538330078,Blue One S
+2025-07-10,XGBoost (retards + calendrier),45.9751091003418,Blue One S
+2025-07-11,XGBoost (retards + calendrier),42.44068145751953,Blue One S
+2025-07-12,XGBoost (retards + calendrier),35.561187744140625,Blue One S
+2025-07-13,XGBoost (retards + calendrier),32.187355041503906,Blue One S
+2025-07-14,XGBoost (retards + calendrier),44.0880126953125,Blue One S
+2025-07-15,XGBoost (retards + calendrier),41.3061408996582,Blue One S
+2025-07-16,XGBoost (retards + calendrier),43.544429779052734,Blue One S
+2025-07-17,XGBoost (retards + calendrier),45.63469314575195,Blue One S
+2025-07-18,XGBoost (retards + calendrier),43.547691345214844,Blue One S
+2025-07-19,XGBoost (retards + calendrier),34.65157699584961,Blue One S
+2025-07-20,XGBoost (retards + calendrier),30.25346565246582,Blue One S
+2025-07-21,XGBoost (retards + calendrier),43.10580062866211,Blue One S
+2025-07-22,XGBoost (retards + calendrier),39.53376388549805,Blue One S
+2025-07-23,XGBoost (retards + calendrier),43.1566276550293,Blue One S
+2025-07-24,XGBoost (retards + calendrier),46.592708587646484,Blue One S
+2025-07-25,XGBoost (retards + calendrier),44.96074676513672,Blue One S
+2025-07-26,XGBoost (retards + calendrier),30.215436935424805,Blue One S
+2025-07-27,XGBoost (retards + calendrier),28.870634078979492,Blue One S
+2025-07-28,XGBoost (retards + calendrier),43.739437103271484,Blue One S
+2025-07-29,XGBoost (retards + calendrier),44.59149932861328,Blue One S
+2025-07-30,XGBoost (retards + calendrier),48.96665954589844,Blue One S
+2025-07-31,XGBoost (retards + calendrier),47.33561325073242,Blue One S
+2025-08-01,XGBoost (retards + calendrier),44.22765350341797,Blue One S
+2025-08-02,XGBoost (retards + calendrier),33.634361267089844,Blue One S
+2025-08-03,XGBoost (retards + calendrier),27.944766998291016,Blue One S
+2025-08-04,XGBoost (retards + calendrier),43.19154357910156,Blue One S
+2025-08-05,XGBoost (retards + calendrier),40.73222732543945,Blue One S
+2025-08-06,XGBoost (retards + calendrier),46.83684158325195,Blue One S
+2025-08-07,XGBoost (retards + calendrier),46.527069091796875,Blue One S
+2025-08-08,XGBoost (retards + calendrier),41.690025329589844,Blue One S
+2025-08-09,XGBoost (retards + calendrier),30.30120849609375,Blue One S
+2025-08-10,XGBoost (retards + calendrier),30.423471450805664,Blue One S
+2025-08-11,XGBoost (retards + calendrier),42.28801345825195,Blue One S
+2025-08-12,XGBoost (retards + calendrier),41.61494064331055,Blue One S
+2025-08-13,XGBoost (retards + calendrier),46.24562454223633,Blue One S
+2025-08-14,XGBoost (retards + calendrier),48.06711196899414,Blue One S
+2025-08-15,XGBoost (retards + calendrier),43.500762939453125,Blue One S
+2025-08-16,XGBoost (retards + calendrier),32.40779495239258,Blue One S
+2025-08-17,XGBoost (retards + calendrier),29.78181266784668,Blue One S
+2025-08-18,XGBoost (retards + calendrier),44.890113830566406,Blue One S
+2025-08-19,XGBoost (retards + calendrier),43.13559341430664,Blue One S
+2025-08-20,XGBoost (retards + calendrier),44.86268997192383,Blue One S
+2025-08-21,XGBoost (retards + calendrier),47.90806198120117,Blue One S
+2025-08-22,XGBoost (retards + calendrier),42.57840347290039,Blue One S
+2025-08-23,XGBoost (retards + calendrier),30.0430850982666,Blue One S
+2025-08-24,XGBoost (retards + calendrier),28.618566513061523,Blue One S
+2025-08-25,XGBoost (retards + calendrier),42.69903564453125,Blue One S
+2025-08-26,XGBoost (retards + calendrier),45.317848205566406,Blue One S
+2025-06-28,reel,8273.0,Blue One M
+2025-06-29,reel,6397.0,Blue One M
+2025-06-30,reel,9665.0,Blue One M
+2025-07-01,reel,7863.0,Blue One M
+2025-07-02,reel,8924.0,Blue One M
+2025-07-03,reel,8536.0,Blue One M
+2025-07-04,reel,8572.0,Blue One M
+2025-07-05,reel,7399.0,Blue One M
+2025-07-06,reel,6378.0,Blue One M
+2025-07-07,reel,9414.0,Blue One M
+2025-07-08,reel,8370.0,Blue One M
+2025-07-09,reel,8025.0,Blue One M
+2025-07-10,reel,8031.0,Blue One M
+2025-07-11,reel,7357.0,Blue One M
+2025-07-12,reel,6653.0,Blue One M
+2025-07-13,reel,5352.0,Blue One M
+2025-07-14,reel,8306.0,Blue One M
+2025-07-15,reel,6861.0,Blue One M
+2025-07-16,reel,6267.0,Blue One M
+2025-07-17,reel,6894.0,Blue One M
+2025-07-18,reel,7363.0,Blue One M
+2025-07-19,reel,6486.0,Blue One M
+2025-07-20,reel,4924.0,Blue One M
+2025-07-21,reel,7386.0,Blue One M
+2025-07-22,reel,6638.0,Blue One M
+2025-07-23,reel,6583.0,Blue One M
+2025-07-24,reel,5640.0,Blue One M
+2025-07-25,reel,7115.0,Blue One M
+2025-07-26,reel,7210.0,Blue One M
+2025-07-27,reel,6766.0,Blue One M
+2025-07-28,reel,7386.0,Blue One M
+2025-07-29,reel,8578.0,Blue One M
+2025-07-30,reel,8795.0,Blue One M
+2025-07-31,reel,8086.0,Blue One M
+2025-08-01,reel,8159.0,Blue One M
+2025-08-02,reel,7468.0,Blue One M
+2025-08-03,reel,6186.0,Blue One M
+2025-08-04,reel,9555.0,Blue One M
+2025-08-05,reel,8776.0,Blue One M
+2025-08-06,reel,8946.0,Blue One M
+2025-08-07,reel,8129.0,Blue One M
+2025-08-08,reel,8118.0,Blue One M
+2025-08-09,reel,7285.0,Blue One M
+2025-08-10,reel,5728.0,Blue One M
+2025-08-11,reel,8907.0,Blue One M
+2025-08-12,reel,7797.0,Blue One M
+2025-08-13,reel,7137.0,Blue One M
+2025-08-14,reel,7451.0,Blue One M
+2025-08-15,reel,6121.0,Blue One M
+2025-08-16,reel,6460.0,Blue One M
+2025-08-17,reel,6995.0,Blue One M
+2025-08-18,reel,9522.0,Blue One M
+2025-08-19,reel,7146.0,Blue One M
+2025-08-20,reel,6995.0,Blue One M
+2025-08-21,reel,6511.0,Blue One M
+2025-08-22,reel,4521.0,Blue One M
+2025-08-23,reel,7741.0,Blue One M
+2025-08-24,reel,4909.0,Blue One M
+2025-08-25,reel,8393.0,Blue One M
+2025-08-26,reel,8042.0,Blue One M
+2025-06-28,Naif saisonnier (reference),5918.0,Blue One M
+2025-06-29,Naif saisonnier (reference),4542.0,Blue One M
+2025-06-30,Naif saisonnier (reference),6733.0,Blue One M
+2025-07-01,Naif saisonnier (reference),5575.0,Blue One M
+2025-07-02,Naif saisonnier (reference),7365.0,Blue One M
+2025-07-03,Naif saisonnier (reference),8300.0,Blue One M
+2025-07-04,Naif saisonnier (reference),9277.0,Blue One M
+2025-07-05,Naif saisonnier (reference),5918.0,Blue One M
+2025-07-06,Naif saisonnier (reference),4542.0,Blue One M
+2025-07-07,Naif saisonnier (reference),6733.0,Blue One M
+2025-07-08,Naif saisonnier (reference),5575.0,Blue One M
+2025-07-09,Naif saisonnier (reference),7365.0,Blue One M
+2025-07-10,Naif saisonnier (reference),8300.0,Blue One M
+2025-07-11,Naif saisonnier (reference),9277.0,Blue One M
+2025-07-12,Naif saisonnier (reference),5918.0,Blue One M
+2025-07-13,Naif saisonnier (reference),4542.0,Blue One M
+2025-07-14,Naif saisonnier (reference),6733.0,Blue One M
+2025-07-15,Naif saisonnier (reference),5575.0,Blue One M
+2025-07-16,Naif saisonnier (reference),7365.0,Blue One M
+2025-07-17,Naif saisonnier (reference),8300.0,Blue One M
+2025-07-18,Naif saisonnier (reference),9277.0,Blue One M
+2025-07-19,Naif saisonnier (reference),5918.0,Blue One M
+2025-07-20,Naif saisonnier (reference),4542.0,Blue One M
+2025-07-21,Naif saisonnier (reference),6733.0,Blue One M
+2025-07-22,Naif saisonnier (reference),5575.0,Blue One M
+2025-07-23,Naif saisonnier (reference),7365.0,Blue One M
+2025-07-24,Naif saisonnier (reference),8300.0,Blue One M
+2025-07-25,Naif saisonnier (reference),9277.0,Blue One M
+2025-07-26,Naif saisonnier (reference),5918.0,Blue One M
+2025-07-27,Naif saisonnier (reference),4542.0,Blue One M
+2025-07-28,Naif saisonnier (reference),6733.0,Blue One M
+2025-07-29,Naif saisonnier (reference),5575.0,Blue One M
+2025-07-30,Naif saisonnier (reference),7365.0,Blue One M
+2025-07-31,Naif saisonnier (reference),8300.0,Blue One M
+2025-08-01,Naif saisonnier (reference),9277.0,Blue One M
+2025-08-02,Naif saisonnier (reference),5918.0,Blue One M
+2025-08-03,Naif saisonnier (reference),4542.0,Blue One M
+2025-08-04,Naif saisonnier (reference),6733.0,Blue One M
+2025-08-05,Naif saisonnier (reference),5575.0,Blue One M
+2025-08-06,Naif saisonnier (reference),7365.0,Blue One M
+2025-08-07,Naif saisonnier (reference),8300.0,Blue One M
+2025-08-08,Naif saisonnier (reference),9277.0,Blue One M
+2025-08-09,Naif saisonnier (reference),5918.0,Blue One M
+2025-08-10,Naif saisonnier (reference),4542.0,Blue One M
+2025-08-11,Naif saisonnier (reference),6733.0,Blue One M
+2025-08-12,Naif saisonnier (reference),5575.0,Blue One M
+2025-08-13,Naif saisonnier (reference),7365.0,Blue One M
+2025-08-14,Naif saisonnier (reference),8300.0,Blue One M
+2025-08-15,Naif saisonnier (reference),9277.0,Blue One M
+2025-08-16,Naif saisonnier (reference),5918.0,Blue One M
+2025-08-17,Naif saisonnier (reference),4542.0,Blue One M
+2025-08-18,Naif saisonnier (reference),6733.0,Blue One M
+2025-08-19,Naif saisonnier (reference),5575.0,Blue One M
+2025-08-20,Naif saisonnier (reference),7365.0,Blue One M
+2025-08-21,Naif saisonnier (reference),8300.0,Blue One M
+2025-08-22,Naif saisonnier (reference),9277.0,Blue One M
+2025-08-23,Naif saisonnier (reference),5918.0,Blue One M
+2025-08-24,Naif saisonnier (reference),4542.0,Blue One M
+2025-08-25,Naif saisonnier (reference),6733.0,Blue One M
+2025-08-26,Naif saisonnier (reference),5575.0,Blue One M
+2025-06-28,"SARIMA (2,1,2)(1,1,1)7",7287.910183291259,Blue One M
+2025-06-29,"SARIMA (2,1,2)(1,1,1)7",6140.379698885104,Blue One M
+2025-06-30,"SARIMA (2,1,2)(1,1,1)7",9283.413571894025,Blue One M
+2025-07-01,"SARIMA (2,1,2)(1,1,1)7",8419.187648664265,Blue One M
+2025-07-02,"SARIMA (2,1,2)(1,1,1)7",8326.680917735575,Blue One M
+2025-07-03,"SARIMA (2,1,2)(1,1,1)7",8199.065686932585,Blue One M
+2025-07-04,"SARIMA (2,1,2)(1,1,1)7",8074.151776601002,Blue One M
+2025-07-05,"SARIMA (2,1,2)(1,1,1)7",7209.530568690206,Blue One M
+2025-07-06,"SARIMA (2,1,2)(1,1,1)7",6065.7954815434205,Blue One M
+2025-07-07,"SARIMA (2,1,2)(1,1,1)7",9291.336104245496,Blue One M
+2025-07-08,"SARIMA (2,1,2)(1,1,1)7",8467.113853142308,Blue One M
+2025-07-09,"SARIMA (2,1,2)(1,1,1)7",8292.992502207611,Blue One M
+2025-07-10,"SARIMA (2,1,2)(1,1,1)7",8124.458778388218,Blue One M
+2025-07-11,"SARIMA (2,1,2)(1,1,1)7",7953.601849938813,Blue One M
+2025-07-12,"SARIMA (2,1,2)(1,1,1)7",7160.748025484777,Blue One M
+2025-07-13,"SARIMA (2,1,2)(1,1,1)7",6026.359271707834,Blue One M
+2025-07-14,"SARIMA (2,1,2)(1,1,1)7",9263.873510235535,Blue One M
+2025-07-15,"SARIMA (2,1,2)(1,1,1)7",8447.999965025268,Blue One M
+2025-07-16,"SARIMA (2,1,2)(1,1,1)7",8274.570475276658,Blue One M
+2025-07-17,"SARIMA (2,1,2)(1,1,1)7",8108.021827228061,Blue One M
+2025-07-18,"SARIMA (2,1,2)(1,1,1)7",7938.136560124524,Blue One M
+2025-07-19,"SARIMA (2,1,2)(1,1,1)7",7151.993292990206,Blue One M
+2025-07-20,"SARIMA (2,1,2)(1,1,1)7",6020.445097334921,Blue One M
+2025-07-21,"SARIMA (2,1,2)(1,1,1)7",9260.527906616784,Blue One M
+2025-07-22,"SARIMA (2,1,2)(1,1,1)7",8446.68693295269,Blue One M
+2025-07-23,"SARIMA (2,1,2)(1,1,1)7",8274.596801762198,Blue One M
+2025-07-24,"SARIMA (2,1,2)(1,1,1)7",8109.226715446555,Blue One M
+2025-07-25,"SARIMA (2,1,2)(1,1,1)7",7940.275609852953,Blue One M
+2025-07-26,"SARIMA (2,1,2)(1,1,1)7",7155.219949843633,Blue One M
+2025-07-27,"SARIMA (2,1,2)(1,1,1)7",6024.422109089092,Blue One M
+2025-07-28,"SARIMA (2,1,2)(1,1,1)7",9265.134865417964,Blue One M
+2025-07-29,"SARIMA (2,1,2)(1,1,1)7",8451.807912171485,Blue One M
+2025-07-30,"SARIMA (2,1,2)(1,1,1)7",8280.122801735042,Blue One M
+2025-07-31,"SARIMA (2,1,2)(1,1,1)7",8115.090136777754,Blue One M
+2025-08-01,"SARIMA (2,1,2)(1,1,1)7",7946.41477743096,Blue One M
+2025-08-02,"SARIMA (2,1,2)(1,1,1)7",7161.603236663186,Blue One M
+2025-08-03,"SARIMA (2,1,2)(1,1,1)7",6030.998483875857,Blue One M
+2025-08-04,"SARIMA (2,1,2)(1,1,1)7",9271.870809296819,Blue One M
+2025-08-05,"SARIMA (2,1,2)(1,1,1)7",8458.674933206074,Blue One M
+2025-08-06,"SARIMA (2,1,2)(1,1,1)7",8287.096719520885,Blue One M
+2025-08-07,"SARIMA (2,1,2)(1,1,1)7",8122.152244784188,Blue One M
+2025-08-08,"SARIMA (2,1,2)(1,1,1)7",7953.549355448896,Blue One M
+2025-08-09,"SARIMA (2,1,2)(1,1,1)7",7168.798379935252,Blue One M
+2025-08-10,"SARIMA (2,1,2)(1,1,1)7",6038.243046824173,Blue One M
+2025-08-11,"SARIMA (2,1,2)(1,1,1)7",9279.156077182946,Blue One M
+2025-08-12,"SARIMA (2,1,2)(1,1,1)7",8465.99368545164,Blue One M
+2025-08-13,"SARIMA (2,1,2)(1,1,1)7",8294.442974555039,Blue One M
+2025-08-14,"SARIMA (2,1,2)(1,1,1)7",8129.5211445324585,Blue One M
+2025-08-15,"SARIMA (2,1,2)(1,1,1)7",7960.936884488016,Blue One M
+2025-08-16,"SARIMA (2,1,2)(1,1,1)7",7176.201289533333,Blue One M
+2025-08-17,"SARIMA (2,1,2)(1,1,1)7",6045.65859075603,Blue One M
+2025-08-18,"SARIMA (2,1,2)(1,1,1)7",9286.582020177048,Blue One M
+2025-08-19,"SARIMA (2,1,2)(1,1,1)7",8473.428185404191,Blue One M
+2025-08-20,"SARIMA (2,1,2)(1,1,1)7",8301.884513418201,Blue One M
+2025-08-21,"SARIMA (2,1,2)(1,1,1)7",8136.968476536149,Blue One M
+2025-08-22,"SARIMA (2,1,2)(1,1,1)7",7968.388983508118,Blue One M
+2025-08-23,"SARIMA (2,1,2)(1,1,1)7",7183.657314149413,Blue One M
+2025-08-24,"SARIMA (2,1,2)(1,1,1)7",6053.1178446172125,Blue One M
+2025-08-25,"SARIMA (2,1,2)(1,1,1)7",9294.043931569502,Blue One M
+2025-08-26,"SARIMA (2,1,2)(1,1,1)7",8480.892283707848,Blue One M
+2025-06-28,Prophet,6693.130995555614,Blue One M
+2025-06-29,Prophet,5529.877175451882,Blue One M
+2025-06-30,Prophet,8524.001948690733,Blue One M
+2025-07-01,Prophet,7816.794431188358,Blue One M
+2025-07-02,Prophet,7765.043633444973,Blue One M
+2025-07-03,Prophet,7563.985131259197,Blue One M
+2025-07-04,Prophet,7562.427240979679,Blue One M
+2025-07-05,Prophet,6808.345786444778,Blue One M
+2025-07-06,Prophet,5676.44109016655,Blue One M
+2025-07-07,Prophet,8707.759182868966,Blue One M
+2025-07-08,Prophet,8023.807105805398,Blue One M
+2025-07-09,Prophet,7991.634081271667,Blue One M
+2025-07-10,Prophet,7804.265376723932,Blue One M
+2025-07-11,Prophet,7811.283108207364,Blue One M
+2025-07-12,Prophet,7058.4210007624115,Blue One M
+2025-07-13,Prophet,5921.5365088132285,Blue One M
+2025-07-14,Prophet,8953.146830507725,Blue One M
+2025-07-15,Prophet,8256.04758487138,Blue One M
+2025-07-16,Prophet,8208.584046891854,Blue One M
+2025-07-17,Prophet,8002.542815287661,Blue One M
+2025-07-18,Prophet,7989.1598972820375,Blue One M
+2025-07-19,Prophet,7212.690934261597,Blue One M
+2025-07-20,Prophet,6050.777435028855,Blue One M
+2025-07-21,Prophet,9067.880681811957,Blue One M
+2025-07-22,Prophet,8348.391444539611,Blue One M
+2025-07-23,Prophet,8282.083858197675,Blue One M
+2025-07-24,Prophet,8059.4625850216025,Blue One M
+2025-07-25,Prophet,8033.201034883385,Blue One M
+2025-07-26,Prophet,7245.694974913552,Blue One M
+2025-07-27,Prophet,6075.835614059521,Blue One M
+2025-07-28,Prophet,9099.3585751328,Blue One M
+2025-07-29,Prophet,8381.46574512467,Blue One M
+2025-07-30,Prophet,8322.486193824418,Blue One M
+2025-07-31,Prophet,8110.705810447125,Blue One M
+2025-08-01,Prophet,8099.264427237157,Blue One M
+2025-08-02,Prophet,7327.722524246927,Blue One M
+2025-08-03,Prophet,6175.270948754255,Blue One M
+2025-08-04,Prophet,9228.023937016771,Blue One M
+2025-08-05,Prophet,8531.180435659933,Blue One M
+2025-08-06,Prophet,8494.916947542515,Blue One M
+2025-08-07,Prophet,8304.721350848007,Blue One M
+2025-08-08,Prophet,8313.76681948849,Blue One M
+2025-08-09,Prophet,7558.505176604351,Blue One M
+2025-08-10,Prophet,6418.322063231554,Blue One M
+2025-08-11,Prophet,9489.777823126935,Blue One M
+2025-08-12,Prophet,8798.306991279247,Blue One M
+2025-08-13,Prophet,8764.336678353142,Blue One M
+2025-08-14,Prophet,8571.113278789988,Blue One M
+2025-08-15,Prophet,8572.537312943856,Blue One M
+2025-08-16,Prophet,7802.763428746182,Blue One M
+2025-08-17,Prophet,6642.2774699919055,Blue One M
+2025-08-18,Prophet,9699.05880603171,Blue One M
+2025-08-19,Prophet,8979.789464358606,Blue One M
+2025-08-20,Prophet,8916.168252153411,Blue One M
+2025-08-21,Prophet,8690.200137678601,Blue One M
+2025-08-22,Prophet,8657.462261668099,Blue One M
+2025-08-23,Prophet,7850.68216326737,Blue One M
+2025-08-24,Prophet,6652.210480967275,Blue One M
+2025-08-25,Prophet,9682.08138401488,Blue One M
+2025-08-26,Prophet,8928.711614251151,Blue One M
+2025-06-28,XGBoost (retards + calendrier),8155.4521484375,Blue One M
+2025-06-29,XGBoost (retards + calendrier),6313.8583984375,Blue One M
+2025-06-30,XGBoost (retards + calendrier),8431.056640625,Blue One M
+2025-07-01,XGBoost (retards + calendrier),7314.42041015625,Blue One M
+2025-07-02,XGBoost (retards + calendrier),7776.0234375,Blue One M
+2025-07-03,XGBoost (retards + calendrier),8572.5791015625,Blue One M
+2025-07-04,XGBoost (retards + calendrier),8546.4951171875,Blue One M
+2025-07-05,XGBoost (retards + calendrier),7738.0732421875,Blue One M
+2025-07-06,XGBoost (retards + calendrier),6446.51904296875,Blue One M
+2025-07-07,XGBoost (retards + calendrier),8736.3408203125,Blue One M
+2025-07-08,XGBoost (retards + calendrier),8155.34619140625,Blue One M
+2025-07-09,XGBoost (retards + calendrier),7955.37890625,Blue One M
+2025-07-10,XGBoost (retards + calendrier),7901.005859375,Blue One M
+2025-07-11,XGBoost (retards + calendrier),7353.5048828125,Blue One M
+2025-07-12,XGBoost (retards + calendrier),6747.42578125,Blue One M
+2025-07-13,XGBoost (retards + calendrier),6066.0224609375,Blue One M
+2025-07-14,XGBoost (retards + calendrier),7367.416015625,Blue One M
+2025-07-15,XGBoost (retards + calendrier),7195.36181640625,Blue One M
+2025-07-16,XGBoost (retards + calendrier),7069.02880859375,Blue One M
+2025-07-17,XGBoost (retards + calendrier),6919.90625,Blue One M
+2025-07-18,XGBoost (retards + calendrier),6593.41259765625,Blue One M
+2025-07-19,XGBoost (retards + calendrier),6005.4013671875,Blue One M
+2025-07-20,XGBoost (retards + calendrier),5132.29345703125,Blue One M
+2025-07-21,XGBoost (retards + calendrier),6661.46044921875,Blue One M
+2025-07-22,XGBoost (retards + calendrier),6541.2314453125,Blue One M
+2025-07-23,XGBoost (retards + calendrier),6635.1201171875,Blue One M
+2025-07-24,XGBoost (retards + calendrier),6849.70068359375,Blue One M
+2025-07-25,XGBoost (retards + calendrier),7490.21337890625,Blue One M
+2025-07-26,XGBoost (retards + calendrier),7411.0947265625,Blue One M
+2025-07-27,XGBoost (retards + calendrier),6210.98291015625,Blue One M
+2025-07-28,XGBoost (retards + calendrier),7883.79931640625,Blue One M
+2025-07-29,XGBoost (retards + calendrier),7801.4384765625,Blue One M
+2025-07-30,XGBoost (retards + calendrier),7929.794921875,Blue One M
+2025-07-31,XGBoost (retards + calendrier),8075.90625,Blue One M
+2025-08-01,XGBoost (retards + calendrier),7920.5400390625,Blue One M
+2025-08-02,XGBoost (retards + calendrier),7413.81298828125,Blue One M
+2025-08-03,XGBoost (retards + calendrier),5948.35400390625,Blue One M
+2025-08-04,XGBoost (retards + calendrier),8454.8564453125,Blue One M
+2025-08-05,XGBoost (retards + calendrier),8010.669921875,Blue One M
+2025-08-06,XGBoost (retards + calendrier),7756.53759765625,Blue One M
+2025-08-07,XGBoost (retards + calendrier),7719.5498046875,Blue One M
+2025-08-08,XGBoost (retards + calendrier),7775.50439453125,Blue One M
+2025-08-09,XGBoost (retards + calendrier),6961.71826171875,Blue One M
+2025-08-10,XGBoost (retards + calendrier),5698.78955078125,Blue One M
+2025-08-11,XGBoost (retards + calendrier),7295.662109375,Blue One M
+2025-08-12,XGBoost (retards + calendrier),7280.001953125,Blue One M
+2025-08-13,XGBoost (retards + calendrier),7142.13037109375,Blue One M
+2025-08-14,XGBoost (retards + calendrier),6817.337890625,Blue One M
+2025-08-15,XGBoost (retards + calendrier),6925.50439453125,Blue One M
+2025-08-16,XGBoost (retards + calendrier),6078.06787109375,Blue One M
+2025-08-17,XGBoost (retards + calendrier),5118.40478515625,Blue One M
+2025-08-18,XGBoost (retards + calendrier),6831.728515625,Blue One M
+2025-08-19,XGBoost (retards + calendrier),6738.927734375,Blue One M
+2025-08-20,XGBoost (retards + calendrier),6975.86083984375,Blue One M
+2025-08-21,XGBoost (retards + calendrier),6874.0224609375,Blue One M
+2025-08-22,XGBoost (retards + calendrier),7014.662109375,Blue One M
+2025-08-23,XGBoost (retards + calendrier),6430.94873046875,Blue One M
+2025-08-24,XGBoost (retards + calendrier),5724.92919921875,Blue One M
+2025-08-25,XGBoost (retards + calendrier),7514.15234375,Blue One M
+2025-08-26,XGBoost (retards + calendrier),8026.5810546875,Blue One M
+2025-06-28,reel,519.0,Blue One L
+2025-06-29,reel,382.0,Blue One L
+2025-06-30,reel,683.0,Blue One L
+2025-07-01,reel,587.0,Blue One L
+2025-07-02,reel,676.0,Blue One L
+2025-07-03,reel,637.0,Blue One L
+2025-07-04,reel,621.0,Blue One L
+2025-07-05,reel,498.0,Blue One L
+2025-07-06,reel,393.0,Blue One L
+2025-07-07,reel,696.0,Blue One L
+2025-07-08,reel,594.0,Blue One L
+2025-07-09,reel,549.0,Blue One L
+2025-07-10,reel,560.0,Blue One L
+2025-07-11,reel,509.0,Blue One L
+2025-07-12,reel,390.0,Blue One L
+2025-07-13,reel,298.0,Blue One L
+2025-07-14,reel,551.0,Blue One L
+2025-07-15,reel,465.0,Blue One L
+2025-07-16,reel,479.0,Blue One L
+2025-07-17,reel,485.0,Blue One L
+2025-07-18,reel,547.0,Blue One L
+2025-07-19,reel,445.0,Blue One L
+2025-07-20,reel,485.0,Blue One L
+2025-07-21,reel,486.0,Blue One L
+2025-07-22,reel,509.0,Blue One L
+2025-07-23,reel,506.0,Blue One L
+2025-07-24,reel,415.0,Blue One L
+2025-07-25,reel,577.0,Blue One L
+2025-07-26,reel,543.0,Blue One L
+2025-07-27,reel,412.0,Blue One L
+2025-07-28,reel,782.0,Blue One L
+2025-07-29,reel,658.0,Blue One L
+2025-07-30,reel,658.0,Blue One L
+2025-07-31,reel,641.0,Blue One L
+2025-08-01,reel,601.0,Blue One L
+2025-08-02,reel,489.0,Blue One L
+2025-08-03,reel,353.0,Blue One L
+2025-08-04,reel,768.0,Blue One L
+2025-08-05,reel,668.0,Blue One L
+2025-08-06,reel,651.0,Blue One L
+2025-08-07,reel,544.0,Blue One L
+2025-08-08,reel,586.0,Blue One L
+2025-08-09,reel,452.0,Blue One L
+2025-08-10,reel,380.0,Blue One L
+2025-08-11,reel,580.0,Blue One L
+2025-08-12,reel,541.0,Blue One L
+2025-08-13,reel,514.0,Blue One L
+2025-08-14,reel,481.0,Blue One L
+2025-08-15,reel,412.0,Blue One L
+2025-08-16,reel,432.0,Blue One L
+2025-08-17,reel,481.0,Blue One L
+2025-08-18,reel,490.0,Blue One L
+2025-08-19,reel,519.0,Blue One L
+2025-08-20,reel,490.0,Blue One L
+2025-08-21,reel,521.0,Blue One L
+2025-08-22,reel,383.0,Blue One L
+2025-08-23,reel,472.0,Blue One L
+2025-08-24,reel,311.0,Blue One L
+2025-08-25,reel,633.0,Blue One L
+2025-08-26,reel,624.0,Blue One L
+2025-06-28,Naif saisonnier (reference),327.0,Blue One L
+2025-06-29,Naif saisonnier (reference),259.0,Blue One L
+2025-06-30,Naif saisonnier (reference),459.0,Blue One L
+2025-07-01,Naif saisonnier (reference),406.0,Blue One L
+2025-07-02,Naif saisonnier (reference),542.0,Blue One L
+2025-07-03,Naif saisonnier (reference),613.0,Blue One L
+2025-07-04,Naif saisonnier (reference),645.0,Blue One L
+2025-07-05,Naif saisonnier (reference),327.0,Blue One L
+2025-07-06,Naif saisonnier (reference),259.0,Blue One L
+2025-07-07,Naif saisonnier (reference),459.0,Blue One L
+2025-07-08,Naif saisonnier (reference),406.0,Blue One L
+2025-07-09,Naif saisonnier (reference),542.0,Blue One L
+2025-07-10,Naif saisonnier (reference),613.0,Blue One L
+2025-07-11,Naif saisonnier (reference),645.0,Blue One L
+2025-07-12,Naif saisonnier (reference),327.0,Blue One L
+2025-07-13,Naif saisonnier (reference),259.0,Blue One L
+2025-07-14,Naif saisonnier (reference),459.0,Blue One L
+2025-07-15,Naif saisonnier (reference),406.0,Blue One L
+2025-07-16,Naif saisonnier (reference),542.0,Blue One L
+2025-07-17,Naif saisonnier (reference),613.0,Blue One L
+2025-07-18,Naif saisonnier (reference),645.0,Blue One L
+2025-07-19,Naif saisonnier (reference),327.0,Blue One L
+2025-07-20,Naif saisonnier (reference),259.0,Blue One L
+2025-07-21,Naif saisonnier (reference),459.0,Blue One L
+2025-07-22,Naif saisonnier (reference),406.0,Blue One L
+2025-07-23,Naif saisonnier (reference),542.0,Blue One L
+2025-07-24,Naif saisonnier (reference),613.0,Blue One L
+2025-07-25,Naif saisonnier (reference),645.0,Blue One L
+2025-07-26,Naif saisonnier (reference),327.0,Blue One L
+2025-07-27,Naif saisonnier (reference),259.0,Blue One L
+2025-07-28,Naif saisonnier (reference),459.0,Blue One L
+2025-07-29,Naif saisonnier (reference),406.0,Blue One L
+2025-07-30,Naif saisonnier (reference),542.0,Blue One L
+2025-07-31,Naif saisonnier (reference),613.0,Blue One L
+2025-08-01,Naif saisonnier (reference),645.0,Blue One L
+2025-08-02,Naif saisonnier (reference),327.0,Blue One L
+2025-08-03,Naif saisonnier (reference),259.0,Blue One L
+2025-08-04,Naif saisonnier (reference),459.0,Blue One L
+2025-08-05,Naif saisonnier (reference),406.0,Blue One L
+2025-08-06,Naif saisonnier (reference),542.0,Blue One L
+2025-08-07,Naif saisonnier (reference),613.0,Blue One L
+2025-08-08,Naif saisonnier (reference),645.0,Blue One L
+2025-08-09,Naif saisonnier (reference),327.0,Blue One L
+2025-08-10,Naif saisonnier (reference),259.0,Blue One L
+2025-08-11,Naif saisonnier (reference),459.0,Blue One L
+2025-08-12,Naif saisonnier (reference),406.0,Blue One L
+2025-08-13,Naif saisonnier (reference),542.0,Blue One L
+2025-08-14,Naif saisonnier (reference),613.0,Blue One L
+2025-08-15,Naif saisonnier (reference),645.0,Blue One L
+2025-08-16,Naif saisonnier (reference),327.0,Blue One L
+2025-08-17,Naif saisonnier (reference),259.0,Blue One L
+2025-08-18,Naif saisonnier (reference),459.0,Blue One L
+2025-08-19,Naif saisonnier (reference),406.0,Blue One L
+2025-08-20,Naif saisonnier (reference),542.0,Blue One L
+2025-08-21,Naif saisonnier (reference),613.0,Blue One L
+2025-08-22,Naif saisonnier (reference),645.0,Blue One L
+2025-08-23,Naif saisonnier (reference),327.0,Blue One L
+2025-08-24,Naif saisonnier (reference),259.0,Blue One L
+2025-08-25,Naif saisonnier (reference),459.0,Blue One L
+2025-08-26,Naif saisonnier (reference),406.0,Blue One L
+2025-06-28,"SARIMA (2,1,2)(1,1,1)7",439.5380038149774,Blue One L
+2025-06-29,"SARIMA (2,1,2)(1,1,1)7",362.24563309084283,Blue One L
+2025-06-30,"SARIMA (2,1,2)(1,1,1)7",615.6956317040492,Blue One L
+2025-07-01,"SARIMA (2,1,2)(1,1,1)7",600.4202522175926,Blue One L
+2025-07-02,"SARIMA (2,1,2)(1,1,1)7",617.7439141479628,Blue One L
+2025-07-03,"SARIMA (2,1,2)(1,1,1)7",613.1228216944615,Blue One L
+2025-07-04,"SARIMA (2,1,2)(1,1,1)7",609.4933986231626,Blue One L
+2025-07-05,"SARIMA (2,1,2)(1,1,1)7",519.9698402008421,Blue One L
+2025-07-06,"SARIMA (2,1,2)(1,1,1)7",440.8899573642562,Blue One L
+2025-07-07,"SARIMA (2,1,2)(1,1,1)7",673.1910977453131,Blue One L
+2025-07-08,"SARIMA (2,1,2)(1,1,1)7",640.2049208867801,Blue One L
+2025-07-09,"SARIMA (2,1,2)(1,1,1)7",636.3804904316312,Blue One L
+2025-07-10,"SARIMA (2,1,2)(1,1,1)7",620.1126759356796,Blue One L
+2025-07-11,"SARIMA (2,1,2)(1,1,1)7",611.3128342313482,Blue One L
+2025-07-12,"SARIMA (2,1,2)(1,1,1)7",529.8753984313939,Blue One L
+2025-07-13,"SARIMA (2,1,2)(1,1,1)7",450.43741961070475,Blue One L
+2025-07-14,"SARIMA (2,1,2)(1,1,1)7",681.0948242784762,Blue One L
+2025-07-15,"SARIMA (2,1,2)(1,1,1)7",646.7758582112643,Blue One L
+2025-07-16,"SARIMA (2,1,2)(1,1,1)7",641.3508569741443,Blue One L
+2025-07-17,"SARIMA (2,1,2)(1,1,1)7",624.2032207249906,Blue One L
+2025-07-18,"SARIMA (2,1,2)(1,1,1)7",615.0137660255281,Blue One L
+2025-07-19,"SARIMA (2,1,2)(1,1,1)7",534.203270809244,Blue One L
+2025-07-20,"SARIMA (2,1,2)(1,1,1)7",454.7390685853456,Blue One L
+2025-07-21,"SARIMA (2,1,2)(1,1,1)7",685.2701829144087,Blue One L
+2025-07-22,"SARIMA (2,1,2)(1,1,1)7",650.8485507138862,Blue One L
+2025-07-23,"SARIMA (2,1,2)(1,1,1)7",645.3001631409682,Blue One L
+2025-07-24,"SARIMA (2,1,2)(1,1,1)7",628.0846828122046,Blue One L
+2025-07-25,"SARIMA (2,1,2)(1,1,1)7",618.8651766785451,Blue One L
+2025-07-26,"SARIMA (2,1,2)(1,1,1)7",538.1029830608811,Blue One L
+2025-07-27,"SARIMA (2,1,2)(1,1,1)7",458.63675405672865,Blue One L
+2025-07-28,"SARIMA (2,1,2)(1,1,1)7",689.1581336562946,Blue One L
+2025-07-29,"SARIMA (2,1,2)(1,1,1)7",654.728588867993,Blue One L
+2025-07-30,"SARIMA (2,1,2)(1,1,1)7",649.1706924623586,Blue One L
+2025-07-31,"SARIMA (2,1,2)(1,1,1)7",631.9499837948691,Blue One L
+2025-08-01,"SARIMA (2,1,2)(1,1,1)7",622.7281618135604,Blue One L
+2025-08-02,"SARIMA (2,1,2)(1,1,1)7",541.9696905811467,Blue One L
+2025-08-03,"SARIMA (2,1,2)(1,1,1)7",462.50330540395896,Blue One L
+2025-08-04,"SARIMA (2,1,2)(1,1,1)7",693.0239348087993,Blue One L
+2025-08-05,"SARIMA (2,1,2)(1,1,1)7",658.5937802429642,Blue One L
+2025-08-06,"SARIMA (2,1,2)(1,1,1)7",653.0351510432748,Blue One L
+2025-08-07,"SARIMA (2,1,2)(1,1,1)7",635.8140394557443,Blue One L
+2025-08-08,"SARIMA (2,1,2)(1,1,1)7",626.592039004334,Blue One L
+2025-08-09,"SARIMA (2,1,2)(1,1,1)7",545.8338546362736,Blue One L
+2025-08-10,"SARIMA (2,1,2)(1,1,1)7",466.3674574236059,Blue One L
+2025-08-11,"SARIMA (2,1,2)(1,1,1)7",696.8880290148991,Blue One L
+2025-08-12,"SARIMA (2,1,2)(1,1,1)7",662.457827456739,Blue One L
+2025-08-13,"SARIMA (2,1,2)(1,1,1)7",656.8991417845044,Blue One L
+2025-08-14,"SARIMA (2,1,2)(1,1,1)7",639.6779991460678,Blue One L
+2025-08-15,"SARIMA (2,1,2)(1,1,1)7",630.4559849409158,Blue One L
+2025-08-16,"SARIMA (2,1,2)(1,1,1)7",549.6978226799652,Blue One L
+2025-08-17,"SARIMA (2,1,2)(1,1,1)7",470.2314245397871,Blue One L
+2025-08-18,"SARIMA (2,1,2)(1,1,1)7",700.7519916756979,Blue One L
+2025-08-19,"SARIMA (2,1,2)(1,1,1)7",666.3217864960893,Blue One L
+2025-08-20,"SARIMA (2,1,2)(1,1,1)7",660.7630964718161,Blue One L
+2025-08-21,"SARIMA (2,1,2)(1,1,1)7",643.5419514404513,Blue One L
+2025-08-22,"SARIMA (2,1,2)(1,1,1)7",634.3199361753715,Blue One L
+2025-08-23,"SARIMA (2,1,2)(1,1,1)7",553.5617756180982,Blue One L
+2025-08-24,"SARIMA (2,1,2)(1,1,1)7",474.0953774064418,Blue One L
+2025-08-25,"SARIMA (2,1,2)(1,1,1)7",704.6159441990001,Blue One L
+2025-08-26,"SARIMA (2,1,2)(1,1,1)7",670.1857387403057,Blue One L
+2025-06-28,Prophet,403.4690120599558,Blue One L
+2025-06-29,Prophet,325.3078950734085,Blue One L
+2025-06-30,Prophet,553.4293700355585,Blue One L
+2025-07-01,Prophet,521.9060100099346,Blue One L
+2025-07-02,Prophet,521.6504260352433,Blue One L
+2025-07-03,Prophet,509.44787465840403,Blue One L
+2025-07-04,Prophet,507.88492741944964,Blue One L
+2025-07-05,Prophet,427.2871097787546,Blue One L
+2025-07-06,Prophet,352.148395914554,Blue One L
+2025-07-07,Prophet,583.5865783278265,Blue One L
+2025-07-08,Prophet,554.0189342936864,Blue One L
+2025-07-09,Prophet,555.1367776223987,Blue One L
+2025-07-10,Prophet,543.5802438452674,Blue One L
+2025-07-11,Prophet,541.9952161475128,Blue One L
+2025-07-12,Prophet,460.469539418203,Blue One L
+2025-07-13,Prophet,383.7682992676894,Blue One L
+2025-07-14,Prophet,613.9065435305472,Blue One L
+2025-07-15,Prophet,581.7718503866091,Blue One L
+2025-07-16,Prophet,579.956441520073,Blue One L
+2025-07-17,Prophet,565.0707640750221,Blue One L
+2025-07-18,Prophet,559.9254897311351,Blue One L
+2025-07-19,Prophet,474.46340740486403,Blue One L
+2025-07-20,Prophet,393.7979578957112,Blue One L
+2025-07-21,Prophet,620.9012171385618,Blue One L
+2025-07-22,Prophet,585.1717723414299,Blue One L
+2025-07-23,Prophet,580.1233433118069,Blue One L
+2025-07-24,Prophet,562.336676902667,Blue One L
+2025-07-25,Prophet,554.7667162871174,Blue One L
+2025-07-26,Prophet,467.170846539637,Blue One L
+2025-07-27,Prophet,384.9519158059479,Blue One L
+2025-07-28,Prophet,611.9632315731809,Blue One L
+2025-07-29,Prophet,576.0239654833898,Blue One L
+2025-07-30,Prophet,571.4669086421616,Blue One L
+2025-07-31,Prophet,554.7316339361935,Blue One L
+2025-08-01,Prophet,548.8000356400934,Blue One L
+2025-08-02,Prophet,463.12428122250043,Blue One L
+2025-08-03,Prophet,383.27772988733796,Blue One L
+2025-08-04,Prophet,613.88031315149,Blue One L
+2025-08-05,Prophet,581.064704373909,Blue One L
+2025-08-06,Prophet,579.886217281355,Blue One L
+2025-08-07,Prophet,566.5599337692282,Blue One L
+2025-08-08,Prophet,564.026924156597,Blue One L
+2025-08-09,Prophet,481.38376385687695,Blue One L
+2025-08-10,Prophet,404.342704999822,Blue One L
+2025-08-11,Prophet,638.2782573591635,Blue One L
+2025-08-12,Prophet,607.6443778069219,Blue One L
+2025-08-13,Prophet,608.2462014017879,Blue One L
+2025-08-14,Prophet,596.1202693031877,Blue One L
+2025-08-15,Prophet,594.2300366263374,Blue One L
+2025-08-16,Prophet,511.3950752808676,Blue One L
+2025-08-17,Prophet,433.5581901252248,Blue One L
+2025-08-18,Prophet,666.9505297901327,Blue One L
+2025-08-19,Prophet,634.4568417063667,Blue One L
+2025-08-20,Prophet,632.7458834042986,Blue One L
+2025-08-21,Prophet,617.7904913999205,Blue One L
+2025-08-22,Prophet,612.689104621666,Blue One L
+2025-08-23,Prophet,526.0914623779909,Blue One L
+2025-08-24,Prophet,444.26964614054856,Blue One L
+2025-08-25,Prophet,674.3989592533761,Blue One L
+2025-08-26,Prophet,637.868822422675,Blue One L
+2025-06-28,XGBoost (retards + calendrier),484.1448059082031,Blue One L
+2025-06-29,XGBoost (retards + calendrier),361.9034729003906,Blue One L
+2025-06-30,XGBoost (retards + calendrier),621.4038696289062,Blue One L
+2025-07-01,XGBoost (retards + calendrier),588.0034790039062,Blue One L
+2025-07-02,XGBoost (retards + calendrier),648.2142333984375,Blue One L
+2025-07-03,XGBoost (retards + calendrier),654.1751708984375,Blue One L
+2025-07-04,XGBoost (retards + calendrier),578.5950317382812,Blue One L
+2025-07-05,XGBoost (retards + calendrier),501.0054626464844,Blue One L
+2025-07-06,XGBoost (retards + calendrier),332.15716552734375,Blue One L
+2025-07-07,XGBoost (retards + calendrier),623.9286499023438,Blue One L
+2025-07-08,XGBoost (retards + calendrier),616.6469116210938,Blue One L
+2025-07-09,XGBoost (retards + calendrier),541.153076171875,Blue One L
+2025-07-10,XGBoost (retards + calendrier),529.0556030273438,Blue One L
+2025-07-11,XGBoost (retards + calendrier),484.1064147949219,Blue One L
+2025-07-12,XGBoost (retards + calendrier),382.986572265625,Blue One L
+2025-07-13,XGBoost (retards + calendrier),309.17437744140625,Blue One L
+2025-07-14,XGBoost (retards + calendrier),500.9547119140625,Blue One L
+2025-07-15,XGBoost (retards + calendrier),450.4053955078125,Blue One L
+2025-07-16,XGBoost (retards + calendrier),461.29754638671875,Blue One L
+2025-07-17,XGBoost (retards + calendrier),418.462158203125,Blue One L
+2025-07-18,XGBoost (retards + calendrier),436.8798522949219,Blue One L
+2025-07-19,XGBoost (retards + calendrier),355.95147705078125,Blue One L
+2025-07-20,XGBoost (retards + calendrier),344.8083190917969,Blue One L
+2025-07-21,XGBoost (retards + calendrier),449.28985595703125,Blue One L
+2025-07-22,XGBoost (retards + calendrier),395.6431884765625,Blue One L
+2025-07-23,XGBoost (retards + calendrier),435.6573791503906,Blue One L
+2025-07-24,XGBoost (retards + calendrier),493.4539794921875,Blue One L
+2025-07-25,XGBoost (retards + calendrier),526.2846069335938,Blue One L
+2025-07-26,XGBoost (retards + calendrier),473.5394592285156,Blue One L
+2025-07-27,XGBoost (retards + calendrier),408.2471008300781,Blue One L
+2025-07-28,XGBoost (retards + calendrier),599.0518188476562,Blue One L
+2025-07-29,XGBoost (retards + calendrier),587.3197631835938,Blue One L
+2025-07-30,XGBoost (retards + calendrier),582.1990356445312,Blue One L
+2025-07-31,XGBoost (retards + calendrier),607.1856689453125,Blue One L
+2025-08-01,XGBoost (retards + calendrier),631.4013671875,Blue One L
+2025-08-02,XGBoost (retards + calendrier),529.3565063476562,Blue One L
+2025-08-03,XGBoost (retards + calendrier),387.9477233886719,Blue One L
+2025-08-04,XGBoost (retards + calendrier),708.9207153320312,Blue One L
+2025-08-05,XGBoost (retards + calendrier),661.2980346679688,Blue One L
+2025-08-06,XGBoost (retards + calendrier),579.9216918945312,Blue One L
+2025-08-07,XGBoost (retards + calendrier),538.6863403320312,Blue One L
+2025-08-08,XGBoost (retards + calendrier),505.3223876953125,Blue One L
+2025-08-09,XGBoost (retards + calendrier),429.3486633300781,Blue One L
+2025-08-10,XGBoost (retards + calendrier),334.1630859375,Blue One L
+2025-08-11,XGBoost (retards + calendrier),583.285400390625,Blue One L
+2025-08-12,XGBoost (retards + calendrier),526.6738891601562,Blue One L
+2025-08-13,XGBoost (retards + calendrier),461.7389831542969,Blue One L
+2025-08-14,XGBoost (retards + calendrier),411.4148254394531,Blue One L
+2025-08-15,XGBoost (retards + calendrier),419.0077209472656,Blue One L
+2025-08-16,XGBoost (retards + calendrier),336.524169921875,Blue One L
+2025-08-17,XGBoost (retards + calendrier),314.1768798828125,Blue One L
+2025-08-18,XGBoost (retards + calendrier),437.0828552246094,Blue One L
+2025-08-19,XGBoost (retards + calendrier),370.973876953125,Blue One L
+2025-08-20,XGBoost (retards + calendrier),418.2514343261719,Blue One L
+2025-08-21,XGBoost (retards + calendrier),452.1697082519531,Blue One L
+2025-08-22,XGBoost (retards + calendrier),458.8603515625,Blue One L
+2025-08-23,XGBoost (retards + calendrier),403.64520263671875,Blue One L
+2025-08-24,XGBoost (retards + calendrier),331.5834655761719,Blue One L
+2025-08-25,XGBoost (retards + calendrier),512.2289428710938,Blue One L
+2025-08-26,XGBoost (retards + calendrier),627.4706420898438,Blue One L

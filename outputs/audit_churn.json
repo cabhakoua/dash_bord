@@ -1,0 +1,121 @@
+{
+  "n_lignes": 13937,
+  "n_colonnes": 24,
+  "doublons_complets": 0,
+  "doublons_msisdn": 0,
+  "valeurs_manquantes": 0,
+  "colonnes_constantes": [
+    "PURGEDONSGSN",
+    "PS_UTRAN",
+    "PS_GERAN",
+    "PS_E-UTRAN",
+    "EPSODBPOS"
+  ],
+  "colonnes_quasi_constantes": [
+    {
+      "colonne": "TGPPAMBRMAXUL",
+      "modalite": "2000000000",
+      "part": 0.99813
+    },
+    {
+      "colonne": "TGPPAMBRMAXDL",
+      "modalite": "100000000",
+      "part": 0.99813
+    }
+  ],
+  "date_ref": "2025-07-29 09:32:00",
+  "purge_min": "2025-01-04 06:20:00",
+  "creation_min": "2025-01-01 05:28:00",
+  "creation_max": "2025-07-26 14:26:00",
+  "purge_avant_creation": 0,
+  "regle_60j_concordance": 0.999641,
+  "regle_60j_exceptions": 5,
+  "months_since_purge_vs_churn": {
+    "0": {
+      "1": 3364,
+      "2": 3201,
+      "3": 1237,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0
+    },
+    "1": {
+      "1": 0,
+      "2": 0,
+      "3": 1170,
+      "4": 2035,
+      "5": 1516,
+      "6": 956,
+      "7": 413,
+      "8": 45
+    }
+  },
+  "seuil_censure": "2025-05-30 09:32:00",
+  "n_censures": 1311,
+  "churners_parmi_censures": 0,
+  "prix_par_forfait_nunique": {
+    "Blue One L": 1,
+    "Blue One M": 1,
+    "Blue One S": 1
+  },
+  "prix_par_forfait": {
+    "Blue One L": 5000,
+    "Blue One M": 3000,
+    "Blue One S": 2000
+  },
+  "total_charge_identite_verifiee": 1.0,
+  "coord_uniques_par_region": 1,
+  "aberrantes_iqr": {
+    "TENURE_MONTHS": {
+      "min": 1.0,
+      "max": 8.0,
+      "borne_basse": 2.0,
+      "borne_haute": 10.0,
+      "n_hors_bornes": 132
+    },
+    "RECHARGE_FREQUENCY": {
+      "min": 0.0,
+      "max": 3.0,
+      "borne_basse": -0.5,
+      "borne_haute": 3.5,
+      "n_hors_bornes": 0
+    },
+    "AGE": {
+      "min": 15.0,
+      "max": 38.0,
+      "borne_basse": 17.0,
+      "borne_haute": 33.0,
+      "n_hors_bornes": 160
+    },
+    "TOTAL_CHARGE": {
+      "min": 0.0,
+      "max": 15000.0,
+      "borne_basse": -8500.0,
+      "borne_haute": 19500.0,
+      "n_hors_bornes": 0
+    },
+    "MONTHLY_CHARGE": {
+      "min": 2000.0,
+      "max": 5000.0,
+      "borne_basse": 0.0,
+      "borne_haute": 8000.0,
+      "n_hors_bornes": 0
+    }
+  },
+  "age_hors_15_120": 0,
+  "tenure_negative": 0,
+  "recharge_negative": 0,
+  "taux_churn_global": 0.4402,
+  "churn_par_forfait": {
+    "Blue One L": 0.5706,
+    "Blue One M": 0.4505,
+    "Blue One S": 0.0057
+  },
+  "repartition_forfaits_churn": {
+    "Blue One M": 0.6143,
+    "Blue One L": 0.2854,
+    "Blue One S": 0.1002
+  }
+}

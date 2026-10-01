@@ -1,0 +1,107 @@
+{
+  "Blue One S": {
+    "Naif saisonnier (reference)": {
+      "MAE": 18.5,
+      "RMSE": 22.7,
+      "MAPE_%": 32.28,
+      "sMAPE_%": 37.96,
+      "biais": -14.0,
+      "MAPE_origine_glissante_%": 31.08
+    },
+    "SARIMA (2,1,2)(1,1,1)7": {
+      "MAE": 17.4,
+      "RMSE": 21.7,
+      "MAPE_%": 29.71,
+      "sMAPE_%": 34.73,
+      "biais": -13.3,
+      "MAPE_origine_glissante_%": 21.11
+    },
+    "Prophet": {
+      "MAE": 19.3,
+      "RMSE": 24.6,
+      "MAPE_%": 31.25,
+      "sMAPE_%": 39.54,
+      "biais": -18.2,
+      "MAPE_origine_glissante_%": 23.08
+    },
+    "XGBoost (retards + calendrier)": {
+      "MAE": 17.1,
+      "RMSE": 20.9,
+      "MAPE_%": 30.17,
+      "sMAPE_%": 34.41,
+      "biais": -11.9,
+      "MAPE_origine_glissante_%": 23.52
+    },
+    "_modele_retenu": "SARIMA (2,1,2)(1,1,1)7"
+  },
+  "Blue One M": {
+    "Naif saisonnier (reference)": {
+      "MAE": 1574.9,
+      "RMSE": 1835.7,
+      "MAPE_%": 21.66,
+      "sMAPE_%": 22.51,
+      "biais": -684.0,
+      "MAPE_origine_glissante_%": 26.83
+    },
+    "SARIMA (2,1,2)(1,1,1)7": {
+      "MAE": 774.8,
+      "RMSE": 1032.8,
+      "MAPE_%": 11.7,
+      "sMAPE_%": 10.59,
+      "biais": 472.2,
+      "MAPE_origine_glissante_%": 15.94
+    },
+    "Prophet": {
+      "MAE": 921.1,
+      "RMSE": 1206.0,
+      "MAPE_%": 13.81,
+      "sMAPE_%": 12.43,
+      "biais": 510.3,
+      "MAPE_origine_glissante_%": 14.87
+    },
+    "XGBoost (retards + calendrier)": {
+      "MAE": 565.7,
+      "RMSE": 807.5,
+      "MAPE_%": 7.82,
+      "sMAPE_%": 7.88,
+      "biais": -251.0,
+      "MAPE_origine_glissante_%": 13.61
+    },
+    "_modele_retenu": "XGBoost (retards + calendrier)"
+  },
+  "Blue One L": {
+    "Naif saisonnier (reference)": {
+      "MAE": 128.4,
+      "RMSE": 149.9,
+      "MAPE_%": 24.63,
+      "sMAPE_%": 27.18,
+      "biais": -69.2,
+      "MAPE_origine_glissante_%": 26.62
+    },
+    "SARIMA (2,1,2)(1,1,1)7": {
+      "MAE": 89.9,
+      "RMSE": 110.2,
+      "MAPE_%": 19.14,
+      "sMAPE_%": 16.7,
+      "biais": 72.3,
+      "MAPE_origine_glissante_%": 23.57
+    },
+    "Prophet": {
+      "MAE": 81.3,
+      "RMSE": 95.0,
+      "MAPE_%": 16.11,
+      "sMAPE_%": 15.39,
+      "biais": 9.9,
+      "MAPE_origine_glissante_%": 17.26
+    },
+    "XGBoost (retards + calendrier)": {
+      "MAE": 52.6,
+      "RMSE": 67.2,
+      "MAPE_%": 10.1,
+      "sMAPE_%": 10.84,
+      "biais": -41.0,
+      "MAPE_origine_glissante_%": 14.04
+    },
+    "_modele_retenu": "XGBoost (retards + calendrier)"
+  }
+}

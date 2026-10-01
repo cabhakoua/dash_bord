@@ -1,0 +1,7 @@
+scenario,alpha,mois,forfait,taux_depart_mensuel,base_debut,activations_prevues,entrees,departs_attendus,base_fin,variation_%,revenu_a_risque_fcfa,revenu_base_fcfa
+central (p*=5%),0.0526,2025-09,Blue One S,0.0149,1331,1468,77,20,1389,4.31,39715,2662667
+central (p*=5%),0.0526,2025-09,Blue One M,0.0579,231113,209370,11014,13391,228736,-1.03,40174430,693339000
+central (p*=5%),0.0526,2025-09,Blue One L,0.0771,15402,15927,838,1188,15051,-2.27,5940493,77008333
+central (p*=5%),0.0526,2025-10,Blue One S,0.0149,1389,1484,78,21,1446,4.13,41426,2777373
+central (p*=5%),0.0526,2025-10,Blue One M,0.0579,228736,211585,11131,13254,226613,-0.93,39761195,686207308
+central (p*=5%),0.0526,2025-10,Blue One L,0.0771,15051,16219,853,1161,14744,-2.05,5805407,75257174

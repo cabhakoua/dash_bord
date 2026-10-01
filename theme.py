@@ -170,25 +170,8 @@ html, body, [class*="st-"], .stMarkdown, table { font-variant-numeric: tabular-n
 .jauge span { display:block; height:100%; background:var(--bleu); }
 
 /* ---------- chrome Streamlit : on retire ce qui n'appartient pas au produit ---------- */
-/* La barre d'en-tete reste en place : c'est elle qui porte la fleche qui rouvre le menu
-   lateral une fois masque. On ne retire que ses boutons de droite (menu, deploiement). */
-[data-testid="stDecoration"], #MainMenu, footer,
-[data-testid="stMainMenu"], [data-testid="stToolbarActions"],
-[data-testid="stAppDeployButton"], .stDeployButton { display:none !important; }
-[data-testid="stHeader"] { background:transparent; height:2.75rem; }
-/* Bouton qui rouvre le menu : son nom interne change selon la version de Streamlit,
-   on les couvre toutes, et on le fixe a l'ecran pour qu'il ne depende d'aucun parent. */
-[data-testid="stExpandSidebarButton"], [data-testid="stSidebarCollapsedControl"],
-[data-testid="collapsedControl"] {
-  display:flex !important; visibility:visible !important; opacity:1 !important;
-  position:fixed !important; top:.65rem; left:.65rem; z-index:1000001;
-  background:#0E1C2B; border-radius:.45rem; box-shadow:0 2px 8px rgba(14,28,43,.25);
-}
-[data-testid="stExpandSidebarButton"] *, [data-testid="stSidebarCollapsedControl"] *,
-[data-testid="collapsedControl"] * { color:#FFFFFF !important; fill:#FFFFFF !important; }
-/* fleche de fermeture, dans la barre sombre : toujours lisible */
-[data-testid="stSidebarCollapseButton"] { opacity:1 !important; visibility:visible !important; }
-[data-testid="stSidebarCollapseButton"] * { color:#9FB3C4 !important; fill:#9FB3C4 !important; }
+[data-testid="stToolbar"], [data-testid="stDecoration"], #MainMenu, footer { display:none !important; }
+[data-testid="stHeader"] { background:transparent; height:0; }
 
 /* ---------- barre laterale : la radio devient une vraie navigation ---------- */
 [data-testid="stSidebar"] [role="radiogroup"] { gap:.12rem; }

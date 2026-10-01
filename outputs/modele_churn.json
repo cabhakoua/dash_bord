@@ -1,0 +1,37 @@
+{
+  "modele": "Regression logistique",
+  "colonnes": [
+    "TENURE_MONTHS",
+    "PLAN_NAME",
+    "MONTHLY_CHARGE",
+    "RECHARGE_FREQUENCY",
+    "REGION",
+    "GENDER",
+    "AGE",
+    "anciennete_jours",
+    "intensite_recharge",
+    "revenu_cumule",
+    "jamais_recharge",
+    "mois_creation",
+    "tranche_age"
+  ],
+  "colonnes_numeriques": [
+    "TENURE_MONTHS",
+    "MONTHLY_CHARGE",
+    "RECHARGE_FREQUENCY",
+    "AGE",
+    "anciennete_jours",
+    "intensite_recharge",
+    "revenu_cumule",
+    "jamais_recharge",
+    "mois_creation"
+  ],
+  "colonnes_categorielles": [
+    "PLAN_NAME",
+    "REGION",
+    "GENDER",
+    "tranche_age"
+  ],
+  "random_state": 42,
+  "sklearn_version": "1.8.0"
+}

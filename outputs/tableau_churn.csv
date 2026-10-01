@@ -1,0 +1,4 @@
+Modele,AUC (VC 5 blocs),AUC (test),AUC-PR (test),Exactitude,Precision (churn),Rappel (churn),F1 (churn),Precision (fidele),Rappel (fidele),Brier,VN / FP / FN / VP
+Regression logistique,0.9003 ± 0.0081,0.8914,0.8934,0.7757,0.7528,0.8018,0.7765,0.8004,0.7511,0.1242,1219 / 404 / 304 / 1230
+Foret aleatoire,0.8924 ± 0.0103,0.8896,0.8924,0.7697,0.7565,0.7757,0.766,0.7828,0.764,0.1256,1240 / 383 / 344 / 1190
+XGBoost,0.8887 ± 0.0110,0.8875,0.8904,0.7669,0.7554,0.7692,0.7623,0.7781,0.7646,0.1273,1241 / 382 / 354 / 1180

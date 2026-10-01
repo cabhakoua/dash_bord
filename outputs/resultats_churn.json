@@ -1,0 +1,230 @@
+{
+  "Regression logistique": {
+    "auc_cv_moyenne": 0.9003,
+    "auc_cv_ecart_type": 0.0081,
+    "f1_cv_moyenne": 0.7858,
+    "auc_test": 0.8914,
+    "auc_pr_test": 0.8934,
+    "brier": 0.1242,
+    "seuil_0.5": {
+      "seuil": 0.5,
+      "exactitude": 0.7757,
+      "precision": 0.7528,
+      "rappel": 0.8018,
+      "f1": 0.7765,
+      "matrice_confusion": [
+        [
+          1219,
+          404
+        ],
+        [
+          304,
+          1230
+        ]
+      ]
+    },
+    "seuil_optimal": {
+      "seuil": 0.4193,
+      "exactitude": 0.7802,
+      "precision": 0.7047,
+      "rappel": 0.9426,
+      "f1": 0.8065,
+      "matrice_confusion": [
+        [
+          1017,
+          606
+        ],
+        [
+          88,
+          1446
+        ]
+      ]
+    },
+    "rapport_classification": {
+      "fidele": {
+        "precision": 0.8003939592908733,
+        "recall": 0.7510782501540357,
+        "f1-score": 0.7749523204068659,
+        "support": 1623.0
+      },
+      "churner": {
+        "precision": 0.7527539779681762,
+        "recall": 0.8018252933507171,
+        "f1-score": 0.7765151515151515,
+        "support": 1534.0
+      },
+      "accuracy": 0.7757364586632879,
+      "macro avg": {
+        "precision": 0.7765739686295248,
+        "recall": 0.7764517717523765,
+        "f1-score": 0.7757337359610087,
+        "support": 3157.0
+      },
+      "weighted avg": {
+        "precision": 0.7772454856294804,
+        "recall": 0.7757364586632879,
+        "f1-score": 0.7757117068243858,
+        "support": 3157.0
+      }
+    }
+  },
+  "Foret aleatoire": {
+    "auc_cv_moyenne": 0.8924,
+    "auc_cv_ecart_type": 0.0103,
+    "f1_cv_moyenne": 0.7683,
+    "auc_test": 0.8896,
+    "auc_pr_test": 0.8924,
+    "brier": 0.1256,
+    "seuil_0.5": {
+      "seuil": 0.5,
+      "exactitude": 0.7697,
+      "precision": 0.7565,
+      "rappel": 0.7757,
+      "f1": 0.766,
+      "matrice_confusion": [
+        [
+          1240,
+          383
+        ],
+        [
+          344,
+          1190
+        ]
+      ]
+    },
+    "seuil_optimal": {
+      "seuil": 0.3772,
+      "exactitude": 0.7735,
+      "precision": 0.6938,
+      "rappel": 0.9557,
+      "f1": 0.8039,
+      "matrice_confusion": [
+        [
+          976,
+          647
+        ],
+        [
+          68,
+          1466
+        ]
+      ]
+    },
+    "rapport_classification": {
+      "fidele": {
+        "precision": 0.7828282828282829,
+        "recall": 0.7640172520024646,
+        "f1-score": 0.7733083879014655,
+        "support": 1623.0
+      },
+      "churner": {
+        "precision": 0.7565162110616656,
+        "recall": 0.7757496740547588,
+        "f1-score": 0.7660122304473769,
+        "support": 1534.0
+      },
+      "accuracy": 0.7697180867912575,
+      "macro avg": {
+        "precision": 0.7696722469449742,
+        "recall": 0.7698834630286118,
+        "f1-score": 0.7696603091744212,
+        "support": 3157.0
+      },
+      "weighted avg": {
+        "precision": 0.7700431329739936,
+        "recall": 0.7697180867912575,
+        "f1-score": 0.7697631533323898,
+        "support": 3157.0
+      }
+    }
+  },
+  "XGBoost": {
+    "auc_cv_moyenne": 0.8887,
+    "auc_cv_ecart_type": 0.011,
+    "f1_cv_moyenne": 0.7606,
+    "auc_test": 0.8875,
+    "auc_pr_test": 0.8904,
+    "brier": 0.1273,
+    "seuil_0.5": {
+      "seuil": 0.5,
+      "exactitude": 0.7669,
+      "precision": 0.7554,
+      "rappel": 0.7692,
+      "f1": 0.7623,
+      "matrice_confusion": [
+        [
+          1241,
+          382
+        ],
+        [
+          354,
+          1180
+        ]
+      ]
+    },
+    "seuil_optimal": {
+      "seuil": 0.2487,
+      "exactitude": 0.7593,
+      "precision": 0.672,
+      "rappel": 0.9857,
+      "f1": 0.7992,
+      "matrice_confusion": [
+        [
+          885,
+          738
+        ],
+        [
+          22,
+          1512
+        ]
+      ]
+    },
+    "rapport_classification": {
+      "fidele": {
+        "precision": 0.7780564263322884,
+        "recall": 0.7646333949476278,
+        "f1-score": 0.7712865133623369,
+        "support": 1623.0
+      },
+      "churner": {
+        "precision": 0.7554417413572343,
+        "recall": 0.7692307692307693,
+        "f1-score": 0.7622739018087855,
+        "support": 1534.0
+      },
+      "accuracy": 0.766867279062401,
+      "macro avg": {
+        "precision": 0.7667490838447614,
+        "recall": 0.7669320820891985,
+        "f1-score": 0.7667802075855612,
+        "support": 3157.0
+      },
+      "weighted avg": {
+        "precision": 0.7670678527650623,
+        "recall": 0.766867279062401,
+        "f1-score": 0.7669072462976717,
+        "support": 3157.0
+      }
+    }
+  },
+  "_ablation_auc": {
+    "sans RECHARGE_FREQUENCY": 0.5686,
+    "sans intensite_recharge": 0.8865,
+    "sans TENURE_MONTHS": 0.8862,
+    "sans PLAN_NAME": 0.8859
+  },
+  "_survie": {
+    "mediane_survie_jours": {
+      "Blue One L": 167.0,
+      "Blue One M": 135.0,
+      "Blue One S": Infinity
+    },
+    "concordance_cox": 0.7543,
+    "rapports_de_risque": {
+      "AGE": 0.9862,
+      "RECHARGE_FREQUENCY": 0.4957,
+      "PLAN_NAME_Blue One M": 1.5723,
+      "PLAN_NAME_Blue One S": 1.025,
+      "GENDER_Male": 0.9954
+    }
+  }
+}

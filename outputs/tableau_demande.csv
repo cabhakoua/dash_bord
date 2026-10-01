@@ -1,0 +1,13 @@
+Forfait,Modele,MAE,RMSE,MAPE_%,sMAPE_%,biais,MAPE_origine_glissante_%,Retenu
+Blue One S,Naif saisonnier (reference),18.5,22.7,32.28,37.96,-14.0,31.08,
+Blue One S,"SARIMA (2,1,2)(1,1,1)7",17.4,21.7,29.71,34.73,-13.3,21.11,oui
+Blue One S,Prophet,19.3,24.6,31.25,39.54,-18.2,23.08,
+Blue One S,XGBoost (retards + calendrier),17.1,20.9,30.17,34.41,-11.9,23.52,
+Blue One M,Naif saisonnier (reference),1574.9,1835.7,21.66,22.51,-684.0,26.83,
+Blue One M,"SARIMA (2,1,2)(1,1,1)7",774.8,1032.8,11.7,10.59,472.2,15.94,
+Blue One M,Prophet,921.1,1206.0,13.81,12.43,510.3,14.87,
+Blue One M,XGBoost (retards + calendrier),565.7,807.5,7.82,7.88,-251.0,13.61,oui
+Blue One L,Naif saisonnier (reference),128.4,149.9,24.63,27.18,-69.2,26.62,
+Blue One L,"SARIMA (2,1,2)(1,1,1)7",89.9,110.2,19.14,16.7,72.3,23.57,
+Blue One L,Prophet,81.3,95.0,16.11,15.39,9.9,17.26,
+Blue One L,XGBoost (retards + calendrier),52.6,67.2,10.1,10.84,-41.0,14.04,oui

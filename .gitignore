@@ -1,5 +1,23 @@
-data/
-outputs/
+# Donnees brutes : churn_database2.csv contient les MSISDN des abonnes.
+# Elles ne sont jamais necessaires a l'application, qui ne lit que outputs/ et figures/.
+data/*.csv
+data/*.xlsx
+data/*.xls
+
+# Environnements et artefacts Python
 __pycache__/
-*.pyc
+*.py[cod]
 .venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Sauvegardes et fichiers temporaires
+*.bak
+*.tmp
+*.log
+outputs/*.pdf
+
+# Systeme
+.DS_Store
+Thumbs.db
