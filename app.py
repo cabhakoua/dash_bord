@@ -181,19 +181,25 @@ def charger_offres_long():
 
 
 @st.cache_data(show_spinner=False)
+def _departs_depuis(chemin: str, mtime: float):
+    """Lecture et nettoyage mis en cache ; mtime renouvelle le cache si le fichier change."""
+    dep = PL.departs_churn(pd.read_csv(chemin))
+    return dep.dropna(subset=["date_depart"])
+
+
 def charger_departs():
     """
     Un départ par ligne (date, région, forfait), calculé automatiquement depuis
     churn_database2.csv (nettoyage inclus, voir `pipeline.departs_churn`).
     Retourne (table, message d'erreur) : l'un des deux est None.
+    Seuls les succès sont mis en cache, jamais le message d'erreur.
     """
     dossiers = [ROOT / "data", OUT, ROOT, ROOT.parent / "data", Path.cwd(), Path.cwd() / "data"]
     for d in dossiers:
         brut = d / "churn_database2.csv"
         if brut.exists():
             try:
-                dep = PL.departs_churn(pd.read_csv(brut))
-                return dep.dropna(subset=["date_depart"]), None
+                return _departs_depuis(str(brut), brut.stat().st_mtime), None
             except Exception as e:
                 return None, f"`{brut}` n'a pas pu être traité : {e}"
     p = OUT / "departs_abonnes.csv"          # à défaut, table déjà calculée
@@ -919,7 +925,7 @@ elif page == "Prévision des offres":
         LONG = D["series"].reset_index().melt("date", var_name="offre",
                                               value_name="activations")
         source = "de référence (trois forfaits Blue One seulement)"
-        st.warning("Le fichier <offres_long.csv> est introuvable dans le dossier outputs : "
+        st.warning("Le fichier `offres_long.csv` est introuvable dans le dossier outputs : "
                    "seuls les forfaits Blue One sont proposés. Lancez 02_parse_offres.py "
                    "ou importez votre classeur dans la première section.")
 
@@ -951,7 +957,7 @@ elif page == "Prévision des offres":
                    placeholder="Tapez un nom pour chercher une offre",
                    help="Triées de la plus vendue à la moins vendue.")
     b = st.columns([1.2, 2.6, 2.6])
-    b[0].button("Toutes les offres", on_click=_toutes, use_container_width=True)
+    b[0].button("Toutes les offres", on_click=_toutes, width="stretch")
     b[1].selectbox("Ajouter une gamme entière", [""] + gammes, key="sel_gamme",
                    on_change=_ajouter_gamme, format_func=lambda g: g or "Ajouter une gamme entière",
                    label_visibility="collapsed")
