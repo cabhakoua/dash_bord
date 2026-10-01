@@ -126,6 +126,7 @@ MODELES = {
     "SARIMA (2,1,2)(1,1,1)7": prev_sarima,
     "Prophet": prev_prophet,
     "XGBoost (retards + calendrier)": None,   # traite a part (retourne le modele)
+    
 }
 
 resultats, previsions_test = {}, {}
